@@ -5,84 +5,84 @@ const products = [
     price: 200,
     quantity: 0,
     productId: 101,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe3@2x.png"),
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe3@2x.png"),
   },
   {
     name: 'Two-Handed Steel Battle Axe',
     price: 300,
     quantity: 0,
     productId: 102,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe4@2x.png"),
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe4@2x.png"),
   }, 
   {
     name: 'Basic Short Iron Axe',
     price: 100,
     quantity: 0,
     productId: 103,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe1@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe1@2x.png")
   },
   {
     name: 'Basic Curved Iron Axe',
     price: 75,
     quantity: 0,
     productId: 104,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe2@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe2@2x.png")
   },
   {
     name: 'Basic Steel Curved Knife',
     price: 175,
     quantity: 0,
     productId: 105,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife@2x.png")
   },
   {
     name: 'Basic Straight Small Sword',
     price: 150,
     quantity: 0,
     productId: 106,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife2@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife2@2x.png")
   },
   {
     name: 'Styled Curved Long Dagger',
     price: 200,
     quantity: 0,
     productId: 107,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\ladies_dagger@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\ladies_dagger@2x.png")
   },
   {
     name: 'Steel Short Broadsword',
     price: 250,
     quantity: 0,
     productId: 108,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\short_sword@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\short_sword@2x.png")
   },
   {
     name: 'Long Steel Broadsword',
     price: 275,
     quantity: 0,
     productId: 109,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\sword@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\sword@2x.png")
   },
   {
     name: 'Heavy Stone War Hammer',
     price: 350,
     quantity: 0,
     productId: 110,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer1@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer1@2x.png")
   },
   {
     name: 'War Hammer of MTRM',
     price: 475,
     quantity: 0,
     productId: 1011,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer3@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer3@2x.png")
   },
   {
     name: 'Mystical Wooden Staff',
     price: 950,
     quantity: 0,
     productId: 112,
-    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\wand@2x.png")
+    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\wand@2x.png")
   },]
 
 /* Create 3 or more product objects using object literal notation 
