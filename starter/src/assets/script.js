@@ -84,7 +84,29 @@ const products = [
     quantity: 0,
     productId: 112,
     image: new URL("..\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\wand@2x.png", base),
-  },]
+  },
+  {
+    name: 'Hammer\'s Batlle Card',
+    price: 1500,
+    quantity: 0,
+    productId: 113,
+    image: new URL("..\\images\\CSS-Cards\\Hammer card.png", base),
+  },
+  {
+    name: 'Captain Ner0\'s Battle Card',
+    price: 1500,
+    quantity: 0,
+    productId: 114,
+    image: new URL("..\\images\\CSS-Cards\\Ner0 card.png", base),
+  },
+  {
+    name: 'Punjab\'s Battle Card',
+    price: 150,
+    quantity: 0,
+    productId: 115,
+    image: new URL("..\\images\\CSS-Cards\\Punjab card.png", base),
+  },
+]
 
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
