@@ -1,88 +1,89 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
+let base = 'https://jhammond23.github.io/'
 const products = [
   {
     name: 'Curved Handle Steel Axe',
     price: 200,
     quantity: 0,
     productId: 101,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe3@2x.png"),
+    image: new URL("C:\\Users\\jake2\\Downloads\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe3@2x.png", base),
   },
   {
     name: 'Two-Handed Steel Battle Axe',
     price: 300,
     quantity: 0,
     productId: 102,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe4@2x.png"),
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset\\axe4@2x.png", base),
   }, 
   {
     name: 'Basic Short Iron Axe',
     price: 100,
     quantity: 0,
     productId: 103,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe1@2x.png")
+    image: new URL(".\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe1.imageset\\axe1@2x.png", base),
   },
   {
     name: 'Basic Curved Iron Axe',
     price: 75,
     quantity: 0,
     productId: 104,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe2@2x.png")
+    image: new URL("..\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe2.imageset\\axe2@2x.png", base),
   },
   {
     name: 'Basic Steel Curved Knife',
     price: 175,
     quantity: 0,
     productId: 105,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife@2x.png", base),
   },
   {
     name: 'Basic Straight Small Sword',
     price: 150,
     quantity: 0,
     productId: 106,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife2@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\knife2@2x.png", base),
   },
   {
     name: 'Styled Curved Long Dagger',
     price: 200,
     quantity: 0,
     productId: 107,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\ladies_dagger@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\ladies_dagger@2x.png", base),
   },
   {
     name: 'Steel Short Broadsword',
     price: 250,
     quantity: 0,
     productId: 108,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\short_sword@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\short_sword@2x.png", base),
   },
   {
     name: 'Long Steel Broadsword',
     price: 275,
     quantity: 0,
     productId: 109,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\sword@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\sword@2x.png", base),
   },
   {
     name: 'Heavy Stone War Hammer',
     price: 350,
     quantity: 0,
     productId: 110,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer1@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer1@2x.png", base),
   },
   {
     name: 'War Hammer of MTRM',
     price: 475,
     quantity: 0,
     productId: 1011,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer3@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\warhammer3@2x.png", base),
   },
   {
     name: 'Mystical Wooden Staff',
     price: 950,
     quantity: 0,
     productId: 112,
-    image: new URL("starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\wand@2x.png")
+    image: new URL("images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\wand@2x.png", base),
   },]
 
 /* Create 3 or more product objects using object literal notation 
