@@ -6,10 +6,10 @@ const products = [
     price: 200,
     quantity: 0,
     productId: 101,
-    image: new URL("..\\images\\Weapon_Collection1\\Weapon_Collection1\\PNGS\\axe3@2x.png", base),
+    image: new URL("..\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset\\axe3@2x.png", base),
   },
   {
-    name: 'Two-Handed Steel Battle Axe',
+    name: 'Two-Handed Battle Axe',
     price: 300,
     quantity: 0,
     productId: 102,
@@ -134,7 +134,7 @@ function productById(productId) {
 */
 
 /* Declare an empty array named cart to hold the items in the cart */
-const cart = [];
+let cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
@@ -213,13 +213,10 @@ function emptyCart() {
 */
 let total = 0
 
-function pay(amount) {
-  total = total + cartTotal();
-  if (total < 0) {
-    total = (-1 * total)
-  }
-  total = amount - total;
-  return total
+let pay = function pay(amount) {
+  total += amount;
+  let newTotal = total - cartTotal();
+  return newTotal;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/

@@ -1,13 +1,13 @@
 * {
     font-family: 'Amatic SC', 'Montserrat', sans-serif;
-    padding: 0;
-    margin: 0;
     background-color: transparent;
     z-index: 2;
     color: #78111D;
     font-size: min(6vh,7vw);
     font-weight: 900;
-    justify-content: center;
+}
+@media screen {
+    
 }
 #myVideo {
     position: fixed;
@@ -19,7 +19,6 @@
   }
 .headerBG {
     background-image: URL("..\\images\\forge.webp");
-    width: 100%;
     z-index: -1;
 }
 .topScroll {
@@ -40,7 +39,7 @@
 }
 .cart-total {
     position: fixed;
-    bottom: -5%;
+    bottom: 0%;
     right: 5%;
     width: 250px;
     z-index: 10000;
@@ -51,26 +50,30 @@
     transform: scale(1.5);
 }
 h2, h3 {
-    padding: 1em 0 .5em;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
 }
 h5 {
     font-size: 45px;
     color:#FBF6F0;
     font-weight: bolder;
+    margin:.25em;
 }
 h4 {
-    font-size: 50px;
-    padding-top: 20px;
+    font-size: 70px;
+    padding-top: .5em;
+    margin-top: .25em;
+    margin-bottom: 1em;
 }
 h6 {
     color: #FBF6F0;
     font-size: 35px;
+    margin: .15px;
 }
 p {
-    padding-bottom: 1em;
     text-align: center;
+    margin: 0px;
+    font: 22px;
 }
 h2 {
     font-size: 1.4em;
@@ -81,9 +84,19 @@ h2 {
 h1 {
     font-size: min(8vh,9vw);
 }
+h3 {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: .25em;
+    margin-bottom: .25em;
+    font-size: min(5vh,6vw);
+}
 #checkouttitle {
-    padding: .25em 0 .25em;
+    padding-top: 1em;
+    padding-bottom: .75em;
     font-size: 75px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 #inventorytitle {
     font-size: min(8vh,5vw);
@@ -93,44 +106,51 @@ h1 {
     color: #4e060e;
 }
 .products-container{
-    max-width: auto;
+    max-width: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2378111d' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
 }
 .cart-container {
-    display: flex;
     height: fit-content;
     width:fit-content;
+    max-width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2378111d' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .checkout-container {
     width: 100%;
-    padding: 1em;
     text-align: center;
     background-image: URL("..\\images\\checkoutscroll-removebg-900.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: min(130vh,120vw);
     font-size: min(8vh,4vw);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .products, .cart{
     display: flex;
     flex-wrap: wrap;
     z-index: 3;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
     font-size: min(8vw, 12vw);
+    justify-content: space-around;
 }
 .products > div {
-    padding: 50px;
-    max-width: 150px;
-    height: 500px;
+    width: 250px;
     background-image: URL("..\\images\\scroll no bg 275x600.png");
     background-repeat: no-repeat;
     z-index: 1;
     border-radius: 15px;
-    margin: 20px;
     margin-bottom: 20px;
     background-position: center;
+    justify-content:flex-end;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 100%;
+    height: 605px;
+    padding: 25px;
 }
 .products > div:hover{
     cursor: pointer;
@@ -138,10 +158,12 @@ h1 {
     background-color: #FBF6F080;
 }
 .products > div img {
-    width: auto;
-    height: 225px;
-    display: block;
-    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 35%;
 }
 
 .products > div h3 {
@@ -171,25 +193,31 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
+
 }
 .checkout-container {
-    position: relative;
     z-index: 1;
-    max-width: 95%;
 }
 .checkout {
     margin-bottom: 4em;
 }
-
 button {
     color: #111;
     border: 3px solid #111;
     background: #78111D;
-    padding: 20px;
+    padding: 15px;
     transition: .2s ease all;
     text-transform: uppercase;
-    font-size: min(4vh,10vw);
     border-radius: 10px;
+    margin-bottom: 15%;
+    font-size: 25px;
+    bottom: 15px;
+    margin: 20%;
+    margin-top: 5%;
+    align-self: center;
+    margin-bottom: 30%;
+    width: 122px;
+    height: 68px;
 }
 button.pay {
     background: #78111D;
@@ -223,4 +251,31 @@ button:hover {
 }
 input {
     border-color: 3px solid #111;
+    width: 20%;
+}
+button.qup {
+    margin: 0px;
+    padding: .5em;
+    height: fit-content;
+    width: fit-content;
+    font-size: 30px;
+}
+button.qdown {
+    margin: 0px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 30px;
+}
+button.remove {
+    margin: .25em;
+    height: fit-content;
+    width: fit-content;
+    font-size: 30px;
+}
+.receipt {
+    background-image: URL("..\\images\\left_right_scroll-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    font-size: 35px;
+    background-size: 400px;
 }
