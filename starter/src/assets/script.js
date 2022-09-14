@@ -1,5 +1,5 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
-let base = "https://jhammond23.github.io/jhammond23.github.io/starter/src/assets/script.js"
+let base = new URL("https://jhammond23.github.io/jhammond23.github.io/starter/src/assets/sript.js")
 const products = [
   {
     name: 'Curved Handle Steel Axe',
@@ -13,7 +13,7 @@ const products = [
     price: 300,
     quantity: 0,
     productId: 102,
-    image: new URL("..\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset\\axe4@2x.png", base),
+    image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset\\axe4@2x.png", base),
   }, 
   {
     name: 'Basic Short Iron Axe',
