@@ -6,7 +6,7 @@ const products = [
     price: 200,
     quantity: 0,
     productId: 101,
-    image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset/axe3@2x.png", base),
+    image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe3.imageset/axe3@2x.png", base),
   },
   {
     name: 'Two-Handed Battle Axe',
@@ -69,7 +69,7 @@ const products = [
     price: 350,
     quantity: 0,
     productId: 110,
-    image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\warhammer.imageset\\warhammer1@2x.png", base),
+    image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\warhammer1.imageset\\warhammer1@2x.png", base),
   },
   {
     name: 'War Hammer of MTRM',
