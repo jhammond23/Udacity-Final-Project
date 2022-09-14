@@ -158,12 +158,10 @@ h3 {
     background-color: #FBF6F080;
 }
 .products > div img {
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    margin-left: 30%;
-    margin-right: 30%;
+    max-width: 200px;
+    max-height: 200px;
     margin-top: 35%;
+    margin-inline: auto;
 }
 
 .products > div h3 {
