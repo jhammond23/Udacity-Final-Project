@@ -1,5 +1,5 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
-let base = "jhammond23.github.io"
+let base = "https://jhammond23.github.io/jhammond23.github.io/starter/src/assets/script.js"
 const products = [
   {
     name: 'Curved Handle Steel Axe',
