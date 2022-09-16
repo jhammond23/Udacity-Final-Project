@@ -24,19 +24,43 @@ function drawProducts() {
     let productList = document.querySelector('.products');
     let productItems = '';
     products.forEach((element) => {
+        if (element.productId > 100) {
         productItems += `
-            <div data-productId='${element.productId}'>
-                <img src='${element.image}'>
+            <div class='weapons' data-productId='${element.productId}'>
+                <img src='${element.image}' class='weaponsImg'>
                 <h3>${element.name}</h3>
                 <p>price: ${currencySymbol}${element.price}</p>
                 <button class='button'>Add to Cart</button>
             </div>
-        `;
-    });
+        `}})
     // use innerHTML so that products only drawn once
     productList.innerHTML = productItems;
 }
 
+function drawCards() {
+    let productList = document.querySelector('.cardsContainer');
+    let productItems = '';
+    products.forEach((element) => {
+        if (element.productId < 100) {
+        productItems += `
+            <div data-productId='${element.productId}'>
+                <img src='${element.image}' class='cardsImg'>
+                <h3>${element.name}</h3>
+                <p>price: ${currencySymbol}${element.price}</p>
+                <button class='button'>Add to Cart</button>
+            </div>
+        `}})
+    // use innerHTML so that products only drawn once
+    productList.innerHTML = productItems;
+}
+    /* changes css class based on a variable
+    document.querySelector('.products').addEventListener('click', (e) => {
+        let productId = e.target.parentNode.getAttribute('data-productId');
+        e.target.classList.remove('weapons')
+        e.target.classList.add('cards')
+    });
+}
+*/
 // Draws cart
 function drawCart() {
     let cartList = document.querySelector('.cart');
@@ -76,11 +100,20 @@ function drawCheckout() {
 }
 
 // Initialize store with products, cart, and checkout
+drawCards();
 drawProducts();
 drawCart();
 drawCheckout();
 
 document.querySelector('.products').addEventListener('click', (e) => {
+    let productId = e.target.parentNode.getAttribute('data-productId');
+    productId *= 1;
+    addProductToCart(productId);
+    drawCart();
+    drawCheckout();
+});
+
+document.querySelector('.cardsContainer').addEventListener('click', (e) => {
     let productId = e.target.parentNode.getAttribute('data-productId');
     productId *= 1;
     addProductToCart(productId);

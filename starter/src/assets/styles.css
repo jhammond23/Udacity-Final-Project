@@ -1,3 +1,4 @@
+@import "https://unpkg.com/open-props";
 * {
     font-family: 'Amatic SC', 'Montserrat', sans-serif;
     background-color: transparent;
@@ -98,17 +99,21 @@ h3 {
     margin-bottom: 0px;
     margin-top: 0px;
 }
-#inventorytitle {
-    font-size: min(8vh,5vw);
+#cardsTitle {
+    margin: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: min(7vh,7vw);
     font-weight: 900;
     text-shadow: #000 0px 8px 12px;
     font-family: 'Uncial Antiqua';
     color: #4e060e;
+    text-shadow: black 0px 8px 12px;
 }
 .products-container{
     max-width: 100%;
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2378111d' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-
 }
 .cart-container {
     height: fit-content;
@@ -135,7 +140,7 @@ h3 {
     font-size: min(8vw, 12vw);
     justify-content: space-around;
 }
-.products > div {
+.weapons {
     width: 250px;
     background-image: URL("..\\images\\scroll no bg 275x600.png");
     background-repeat: no-repeat;
@@ -151,23 +156,139 @@ h3 {
     max-height: 100%;
     height: 605px;
     padding: 25px;
+    order: 2;
 }
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+    scroll-snap-align: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #78111D;
+    border: 3px solid #4e060e;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+  /* Buttons */
+::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 13px;
+    width: 16px;
+    background-color: #78111D;
+    border: 3px solid #4e060e;
+    border-radius: 25px;
+  }
+.cardsContainer {
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    justify-content:flex-start;
+    margin-right:30px;
+    text-align: center;
+    width: 100%;
+    max-height: 60%;
+    order: 1;
+    background-color: black;
+    box-shadow: #000 50px 50px 50px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 500px;
+    gap: var(--size-3);
+    overscroll-behavior-inline: contain;
+    background-color: #050505;
+    overflow-x: auto;
+
+}
+.cardsContainer > div {
+    height: 450px;
+    width: 400px;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    margin: 0px;
+    justify-content: end;
+}
+
 .products > div:hover{
     cursor: pointer;
     box-shadow: #FBF6F0 0px 12px 24px;
     background-color: #FBF6F080;
 }
-.products > div img {
+.cardsImg:hover{
+    cursor: pointer;
+    box-shadow: #FBF6F0 0px 12px 24px;
+    background-color: #FBF6F080;
+}
+.weaponsImg {
     max-width: 200px;
     max-height: 200px;
     margin-top: 35%;
     margin-inline: auto;
 }
+.cardsImg {
+    max-width: auto;
+    height: 100%;
+    margin-top: 15px;
+    margin: 0px;
+}
+.cardsContainer > div > h3 {
+    height: fit-content;
+    width: 150px;
+    margin-left: 50px;
+    font-size: 50px;
+}
+.cardsContainer > div > p{
+    margin-left: 50px;
+    text-align: left;
+    color: #aaa;
+    font-size: 25px;
+    font-family: 'Uncial Antiqua';
+}
+.cardsContainer > div > button {
+    margin-left: 50px;
+    height: auto;
+    width: auto;
+    margin-bottom: 40%;
 
+}
+.cardsContainer > div {
+    margin-left: 15px;
+    margin-top: 15px;
+}
 .products > div h3 {
     font-weight: 800;
     color: #111;
     position: relative;
+}
+#weaponsTitle {
+    text-align: left;
+    font-size: min(7vh,7vw);
+    font-weight: 900;
+    text-shadow: black 0px 8px 12px;
+    font-family: 'Uncial Antiqua';
+    color: #4e060e;
+    margin: 30px;
 }
 .cartBorder {
     background-image: URL("..\\images\\header_scroll-removebg-preview.png");
@@ -179,7 +300,6 @@ h3 {
     font-size: min(8vh,9vw);
 }
 .cart > div {
-
     border-radius: 25px;
     margin: .25em;
     padding: .5em;
