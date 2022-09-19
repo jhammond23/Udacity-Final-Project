@@ -40,7 +40,7 @@
     position: fixed;
     bottom: 0%;
     right: 5%;
-    width: 250px;
+    width: 275px;
     z-index: 10000;
     text-align: center;
     background-image: URL("..\\images\\left_right_scroll-removebg-preview.png");
@@ -94,7 +94,7 @@ h3 {
     font-size: 35px;
 }
 .cart-total > div > p {
-    font-size: 45px;
+    font-size: 40px;
 }
 #checkouttitle {
     padding-top: 1em;
@@ -141,8 +141,9 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     z-index: 3;
-    font-size: min(8vw, 12vw);
+    font-size: 60px;
     justify-content: space-around;
+    margin-bottom: 25px;
 }
 .weapons {
     width: 250px;
@@ -306,10 +307,10 @@ h3 {
     background-image: URL("..\\images\\header_scroll-removebg-preview.png");
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: min(60vh,80vw);
+    background-size: 400px;
     padding-bottom: 5%;
     margin-top: 40px;
-    font-size: min(8vh,9vw);
+    font-size: 70px;
 }
 .cart > div {
     border-radius: 25px;
@@ -323,7 +324,6 @@ h3 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
-
 }
 .checkout-container {
     z-index: 1;
@@ -410,5 +410,5 @@ button.remove {
     background-size: 400px;
 }
 label {
-    font-size: 60px;
+    font-size: 45px;
 }
