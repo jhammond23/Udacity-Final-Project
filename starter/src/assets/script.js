@@ -106,6 +106,13 @@ const products = [
     productId: 97,
     image: new URL("\\starter\\src\\images\\CSS-Cards\\Punjab card.png", base),
   },
+  {
+    name: 'The Minotaur King',
+    price: 3000,
+    quantity: 0,
+    productId: 96,
+    image: new URL("\\starter\\src\\images\\CSS-Cards\\MK320x540.png", base),
+  },
 ]
 
 /* Create 3 or more product objects using object literal notation 
