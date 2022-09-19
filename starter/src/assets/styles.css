@@ -7,11 +7,6 @@
     font-size: min(6vh,7vw);
     font-weight: 900;
 }
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: white;
-    }
-}
 #myVideo {
     position: fixed;
     bottom: 0;
@@ -38,7 +33,7 @@
     padding: 15px;
     color: #78111D;
     font-size: 70px;
-    top: -5px;
+    top: -15px;
     margin-bottom: 0%;
 }
 .cart-total {
