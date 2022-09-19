@@ -53,14 +53,7 @@ function drawCards() {
     // use innerHTML so that products only drawn once
     productList.innerHTML = productItems;
 }
-    /* changes css class based on a variable
-    document.querySelector('.products').addEventListener('click', (e) => {
-        let productId = e.target.parentNode.getAttribute('data-productId');
-        e.target.classList.remove('weapons')
-        e.target.classList.add('cards')
-    });
-}
-*/
+
 // Draws cart
 function drawCart() {
     let cartList = document.querySelector('.cart');
@@ -177,6 +170,10 @@ document.querySelector('.pay').addEventListener('click', (e) => {
             Thank you!<br>
             ~~~~~~~~~~~~~~~~~~~~</div>
         `;
+        emptyCart();
+        drawCart();
+        drawCheckout();
+        total = 0;
     } else {
         // reset cash field for next entry
         document.querySelector('.received').value = '';
@@ -195,53 +192,55 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
 /* Standout suggestions */
 /* Begin remove all items from cart */
-// function dropCart(){
-//     let shoppingCart = document.querySelector('.empty-btn');
-//     let div = document.createElement("button");
-//     div.classList.add("empty");
-//     div.innerHTML =`Empty Cart`;
-//     shoppingCart.append(div);
-// }
-// dropCart();
+ function dropCart(){
+     let shoppingCart = document.querySelector('.empty-btn');
+     let div = document.createElement("button");
+     div.classList.add("empty");
+     div.innerHTML =`Empty Your Cart`;
+     shoppingCart.append(div);
+ }
+ dropCart();
 
-// document.querySelector('.empty-btn').addEventListener('click', (e) => {
-//     if (e.target.classList.contains('empty')){
-//         emptyCart();
-//         drawCart();
-//         drawCheckout();
-//     }
-// })
+ document.querySelector('.empty-btn').addEventListener('click', (e) => {
+     soundRemove();
+     if (e.target.classList.contains('empty')){
+         emptyCart();
+         drawCart();
+         drawCheckout();
+     }
+ })
 /* End all items from cart */
 
 /* Begin currency converter */
-// function currencyBuilder(){
-//     let currencyPicker = document.querySelector('.currency-selector');
-//     let select = document.createElement("select");
-//     select.classList.add("currency-select");
-//     select.innerHTML = `<option value="USD">USD</option>
-//                         <option value="EUR">EUR</option>
-//                         <option value="YEN">YEN</option>`;
-//     currencyPicker.append(select);
-// }
-// currencyBuilder();
+/* function currencyBuilder(){
+     let currencyPicker = document.querySelector('.currency-selector');
+     let select = document.createElement("select");
+     select.classList.add("currency-select");
+     select.innerHTML = `<option value="USD">USD</option>
+                         <option value="EUR">EUR</option>
+                         <option value="YEN">YEN</option>`;
+     currencyPicker.append(select);
+ }
+ currencyBuilder();
 
-// document.querySelector('.currency-select').addEventListener('change', function handleChange(event) {
-//     switch(event.target.value){
-//         case 'EUR':
-//             currencySymbol = '€';
-//             break;
-//         case 'YEN':
-//             currencySymbol = '¥';
-//             break;
-//         default:
-//             currencySymbol = '$';
-//             break;
-//      }
+ document.querySelector('.currency-select').addEventListener('change', function handleChange(event) {
+     switch(event.target.value){
+         case 'EUR':
+             currencySymbol = '€';
+             break;
+         case 'YEN':
+             currencySymbol = '¥';
+             break;
+         default:
+             currencySymbol = '$';
+             break;
+      }
 
-//     currency(event.target.value);
-//     drawProducts();
-//     drawCart();
-//     drawCheckout();
-// });
+     currency(event.target.value);
+     drawProducts();
+     drawCart();
+     drawCheckout();
+ }); */
+
 /* End currency converter */
 /* End standout suggestions */

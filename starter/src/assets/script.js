@@ -212,6 +212,7 @@ function emptyCart() {
     cart[index].quantity = 0;
   }
   cart.splice(0, cart.length - 1);
+  cart = [];
 }
 
 /* Create a function named pay that takes in an amount as an argument
@@ -245,6 +246,7 @@ module.exports = {
   cartTotal,
   pay, 
   emptyCart,
+  total,
   /* Uncomment the following line if completing the currency converter bonus */
-  currency
+  // currency
 }
