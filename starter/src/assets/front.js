@@ -212,7 +212,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 /* End all items from cart */
 
 /* Begin currency converter */
-/* function currencyBuilder(){
+function currencyBuilder(){
      let currencyPicker = document.querySelector('.currency-selector');
      let select = document.createElement("select");
      select.classList.add("currency-select");
@@ -240,7 +240,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
      drawProducts();
      drawCart();
      drawCheckout();
- }); */
+ });
 
 /* End currency converter */
 /* End standout suggestions */

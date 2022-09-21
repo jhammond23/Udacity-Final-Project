@@ -41,8 +41,9 @@
     bottom: 0%;
     right: 5%;
     width: 275px;
+    height: 90px;
+    min-width: fit-content;
     z-index: 10000;
-    text-align: center;
     background-image: URL("..\\images\\left_right_scroll-removebg-preview.png");
     background-repeat: no-repeat;
     line-height: 2.5;
@@ -94,7 +95,17 @@ h3 {
     font-size: 35px;
 }
 .cart-total > div > p {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.currency-selector > select {
+    width: 100px;
+    text-align: center;
+    height: auto;
+    border-radius: 15px;
+    background-color: black;
+    border: 1px solid #DCC099;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
 }
 #checkouttitle {
     padding-top: 1em;

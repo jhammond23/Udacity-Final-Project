@@ -6,6 +6,7 @@ const products = [
     price: 200,
     quantity: 0,
     productId: 101,
+    basePrice: 200,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe3.imageset/axe3@2x.png", base),
   },
   {
@@ -13,6 +14,7 @@ const products = [
     price: 300,
     quantity: 0,
     productId: 102,
+    basePrice: 300,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe4.imageset\\axe4@2x.png", base),
   }, 
   {
@@ -20,6 +22,7 @@ const products = [
     price: 100,
     quantity: 0,
     productId: 103,
+    basePrice: 100,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe1.imageset\\axe1@2x.png", base),
   },
   {
@@ -27,6 +30,7 @@ const products = [
     price: 75,
     quantity: 0,
     productId: 104,
+    basePrice: 75,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\axe2.imageset\\axe2@2x.png", base),
   },
   {
@@ -34,6 +38,7 @@ const products = [
     price: 175,
     quantity: 0,
     productId: 105,
+    basePrice: 175,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\knife.imageset\\knife@2x.png", base),
   },
   {
@@ -41,6 +46,7 @@ const products = [
     price: 150,
     quantity: 0,
     productId: 106,
+    basePrice: 150,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\knife2.imageset\\knife2@2x.png", base),
   },
   {
@@ -48,6 +54,7 @@ const products = [
     price: 200,
     quantity: 0,
     productId: 107,
+    basePrice: 200,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\ladies_dagger.imageset\\ladies_dagger@2x.png", base),
   },
   {
@@ -55,6 +62,7 @@ const products = [
     price: 250,
     quantity: 0,
     productId: 108,
+    basePrice: 250,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\short_sword.imageset\\short_sword@2x.png", base),
   },
   {
@@ -62,6 +70,7 @@ const products = [
     price: 275,
     quantity: 0,
     productId: 109,
+    basePrice: 275,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\sword.imageset\\sword@2x.png", base),
   },
   {
@@ -69,13 +78,15 @@ const products = [
     price: 350,
     quantity: 0,
     productId: 110,
+    basePrice: 350,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\warhammer1.imageset\\warhammer1@2x.png", base),
   },
   {
     name: 'War Hammer of MTRM',
     price: 475,
     quantity: 0,
-    productId: 1011,
+    productId: 111,
+    basePrice: 475,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\warhammer3.imageset\\warhammer3@2x.png", base),
   },
   {
@@ -83,6 +94,7 @@ const products = [
     price: 950,
     quantity: 0,
     productId: 112,
+    basePrice: 950,
     image: new URL("\\starter\\src\\images\\Weapon_Collection1\\Weapon_Collection1\\Weapons.xcassets\\wand.imageset\\wand@2x.png", base),
   },
   {
@@ -90,6 +102,7 @@ const products = [
     price: 1500,
     quantity: 0,
     productId: 99,
+    basePrice: 1500,
     image: new URL("\\starter\\src\\images\\CSS-Cards\\Hammer card.png", base),
   },
   {
@@ -97,6 +110,7 @@ const products = [
     price: 1500,
     quantity: 0,
     productId: 98,
+    basePrice: 1500,
     image: new URL("\\starter\\src\\images\\CSS-Cards\\Ner0 card.png", base),
   },
   {
@@ -104,6 +118,7 @@ const products = [
     price: 1500,
     quantity: 0,
     productId: 97,
+    basePrice: 1500,
     image: new URL("\\starter\\src\\images\\CSS-Cards\\Punjab card.png", base),
   },
   {
@@ -111,6 +126,7 @@ const products = [
     price: 3000,
     quantity: 0,
     productId: 96,
+    basePrice: 3000,
     image: new URL("\\starter\\src\\images\\CSS-Cards\\MK320x540.png", base),
   },
 ]
@@ -203,7 +219,7 @@ function cartTotal() {
   let total = 0;
   cart.forEach((item) => {
     total += (item.price * item.quantity);
-  }); return total
+  }); return total;
 }
 
 /* Create a function called emptyCart that empties the products from the cart */
@@ -223,12 +239,25 @@ let total = 0
 
 let pay = function pay(amount) {
   total += amount;
-  let newTotal = total - cartTotal();
+  let newTotal = (total - cartTotal());
   return newTotal;
 }
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
-
+function currency() {
+  let USD = 1.000;
+  let EUR = 0.9965;
+  let YEN = 143.1875;
+  for (let index = 0; index < products.length; ++index) {
+    if (currencySymbol === '$') {
+      products[index].price = (USD * products[index].basePrice).toFixed(2);
+    } else if (currencySymbol === '€') {
+      products[index].price = (EUR * products[index].basePrice).toFixed(2);
+    } else if (currencySymbol === '¥') {
+      products[index].price = (YEN * products[index].basePrice).toFixed(2);
+    };
+  }
+}
 
 /* The following is for running unit tests. 
    To fully complete this project, it is expected that all tests pass.
@@ -248,5 +277,5 @@ module.exports = {
   emptyCart,
   total,
   /* Uncomment the following line if completing the currency converter bonus */
-  // currency
+  currency
 }
