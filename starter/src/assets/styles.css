@@ -494,7 +494,7 @@ label {
         display:contents;
         display: flex;
         justify-content: center;
-        color: #78111D;
+        color: #000;
         text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
         font-size: 40px;
         font-family: 'Uncial Antiqua';
@@ -506,7 +506,7 @@ label {
         text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
         font-size: 60px;
         font-family: 'Uncial Antiqua';
-        margin-top: 10%;
+        margin-top: 5%;
         animation: fadeIn 7s;
     }
 
