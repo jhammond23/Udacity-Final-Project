@@ -238,6 +238,7 @@ function currencyBuilder(){
 
      currency(event.target.value);
      drawProducts();
+     drawCards()
      drawCart();
      drawCheckout();
  });
