@@ -618,9 +618,10 @@ label {
         grid-auto-flow: column;
         overscroll-behavior-inline: contain;
         overflow-x: auto;
+        justify-content: space-evenly;
     }
     .cart > div {
-        height: 300px;
+        height: 325px;
         width: 250px;
 
     }
