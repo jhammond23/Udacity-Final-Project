@@ -77,7 +77,7 @@ function drawCart() {
     // use innerHTML so that cart products only drawn once
     cart.length
         ? (cartList.innerHTML = cartItems)
-        : (cartList.innerHTML = '----- No Items -----');
+        : (cartList.innerHTML = 'No Items');
 }
 
 // Draws checkout

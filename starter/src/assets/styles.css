@@ -108,6 +108,8 @@ h3 {
     border: 1px solid #DCC099;
     box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
     margin-top: 15px;
+    position: fixed;
+    z-index: 10;
 }
 #checkouttitle {
     padding-top: 1em;
@@ -472,26 +474,39 @@ label {
     box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
     border: 1px solid #DCC099;
 }
-
+.welcome > p {
+    display: none;
+}
 /* On screens that are 500px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     .headerBG {
-        height: 500px;
+        height: 700px;
         display: flex;
         flex-wrap: wrap;
     }
     .topScroll {
+        position: relative;
         background-image: none;
         background-color: #00000095;
         z-index: 1;
       }
+    .welcome > p {
+        display:contents;
+        display: flex;
+        justify-content: center;
+        color: #78111D;
+        text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
+        font-size: 40px;
+        font-family: 'Uncial Antiqua';
+        margin-top: 50%;
+    }
     .h1 {
         padding: 15px;
         color: #78111D;
         text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
         font-size: 60px;
         font-family: 'Uncial Antiqua';
-        margin-top: 30%;
+        margin-top: 10%;
         animation: fadeIn 7s;
     }
 
@@ -612,19 +627,20 @@ label {
         margin-top: 20%;
     }
     .cart {
-        justify-content:flex-start;
-        width: 100%;
+        justify-content: flex-start;
+        width: auto;
         height: fit-content;
         order: 1;
-        display: grid;
+        display:grid;
         grid-auto-flow: column;
         overscroll-behavior-inline: contain;
+        grid-auto-columns: 300px;
         overflow-x: auto;
+        gap: var(--size-2);
     }
     .cart > div {
         height: fit-content;
         width: 250px;
-
     }
     .cart > div > h5 {
         font-size: 25px;
