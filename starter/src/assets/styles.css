@@ -196,9 +196,11 @@ h3 {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #78111D;
-    border: 3px solid #4e060e;
     border-radius: 10px;
+    background-color:black;
+    box-shadow: black 2px 4px 6px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
   }
   
   /* Handle on hover */
@@ -612,23 +614,32 @@ label {
     .cart {
         justify-content:flex-start;
         width: 100%;
-        max-height: 30%;
+        height: fit-content;
         order: 1;
         display: grid;
         grid-auto-flow: column;
         overscroll-behavior-inline: contain;
         overflow-x: auto;
-        justify-content: space-evenly;
     }
     .cart > div {
-        height: 325px;
+        height: fit-content;
         width: 250px;
 
     }
     .cart > div > h5 {
-        font-size: 35px;
+        font-size: 25px;
     }
     .cart > div > h6 {
-        font-size: 35px;
+        font-size: 25px;
+    }
+    .cart-total {
+        margin: auto;
+        right: 0px;
+        left: 15px;
+        height: auto;
+
+    }
+    .cart-total > div > p {
+        margin: auto;
     }
   }
