@@ -282,12 +282,11 @@ h3 {
 .cardsContainer > div > p{
     margin-left: 50px;
     text-align: center;
-    color:#4e060e;
+    color:#78111D;
     font-size: 30px;
     font-family: 'Uncial Antiqua';
     width: fit-content;
     max-width: 150px;
-    text-shadow: 0 0 1px #DCC099, 0 0 1px #DCC099;
 }
 .cardsContainer > div > button {
     margin-left: 30px;
@@ -324,13 +323,12 @@ h3 {
     margin-top: 5%;
 }
 .cartBorder {
-    background-image: URL("..\\images\\header_scroll-removebg-preview.png");
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 400px;
+    font-family: 'Uncial Antiqua';
     padding-bottom: 5%;
     margin-top: 40px;
-    font-size: 70px;
+    font-size: 50px;
+    text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
+    color:#4e060e
 }
 .cart > div {
     border-radius: 25px;
@@ -340,10 +338,20 @@ h3 {
     max-width: 250px;
     max-height: auto;
     text-align: center;
+    color: #78111D;
+    background: #000;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
     background-image: URL("..\\images\\backpack-removebg-preview.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat;    background-position: center;
     background-size: auto;
+}
+.cart > div > h6 {
+    text-align: center;
+    width: fit-content;
+    padding: 5px;
+    background-color: #11111190;
+    margin: auto;
 }
 .checkout-container {
     z-index: 1;
@@ -409,18 +417,33 @@ button.qup {
     height: fit-content;
     width: fit-content;
     font-size: 30px;
+    color: #78111D;
+    background-color:black;
+    box-shadow: black 2px 4px 6px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
 }
 button.qdown {
     margin: 0px;
     height: fit-content;
     width: fit-content;
     font-size: 30px;
+    color: #78111D;
+    background-color:black;
+    box-shadow: black 2px 4px 6px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
 }
 button.remove {
     margin: .25em;
     height: fit-content;
     width: fit-content;
     font-size: 30px;
+    color: #78111D;
+    background-color:black;
+    box-shadow: black 2px 4px 6px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
 }
 .receipt {
     background-image: URL("..\\images\\left_right_scroll-removebg-preview.png");
@@ -441,7 +464,11 @@ label {
     margin-bottom: 20px;
     font-size: 30px;
     width: fit-content;
-    height: auto;
+    height: auto;    color: #78111D;
+    background-color:black;
+    box-shadow: black 2px 4px 6px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    border: 1px solid #DCC099;
 }
 
 /* On screens that are 500px or less, set the background color to olive */
@@ -463,7 +490,7 @@ label {
         font-size: 60px;
         font-family: 'Uncial Antiqua';
         margin-top: 30%;
-        animation: fadeIn 10s;
+        animation: fadeIn 7s;
     }
 
     @keyframes fadeIn {
@@ -595,7 +622,7 @@ label {
     .cart > div {
         height: 300px;
         width: 250px;
-        margin: 20px;
+
     }
     .cart > div > h5 {
         font-size: 35px;
