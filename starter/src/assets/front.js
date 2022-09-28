@@ -1,5 +1,6 @@
 let currencySymbol = '$';
-// Draws product list
+
+// Adds sounds to buttons
 function soundAdd() {
     const audio = new Audio("starter\\src\\images\\ES_Duffle Bag Drop 1 - SFX Producer.mp3");
     audio.play()
@@ -20,6 +21,8 @@ function soundPay() {
     const audio = new Audio("starter\\src\\images\\ES_Coins Drop 1 - SFX Producer.mp3");
     audio.play()
 }
+
+// Draws product list
 function drawProducts() {
     let productList = document.querySelector('.products');
     let productItems = '';
@@ -190,8 +193,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
     paymentSummary.append(div);
 });
 
-/* Standout suggestions */
-/* Begin remove all items from cart */
+/* Removes all items from cart */
  function dropCart(){
      let shoppingCart = document.querySelector('.empty-btn');
      let div = document.createElement("button");
@@ -209,9 +211,8 @@ document.querySelector('.pay').addEventListener('click', (e) => {
          drawCheckout();
      }
  })
-/* End all items from cart */
 
-/* Begin currency converter */
+/*Initializes currencies for currency converter */
 function currencyBuilder(){
      let currencyPicker = document.querySelector('.currency-selector');
      let select = document.createElement("select");
@@ -243,5 +244,3 @@ function currencyBuilder(){
      drawCheckout();
  });
 
-/* End currency converter */
-/* End standout suggestions */
