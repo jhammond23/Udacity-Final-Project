@@ -18,6 +18,13 @@
     <video autoplay muted loop id="myVideo">
         <source src="starter\src\images\Fire_Embers_19___30s___4k_res.mp4">
     </video>
+    <div class="swordline">  </div>
+    <div class='quicklog'>
+        <div id="prompt">Don't want to login?</div>
+        <a href="main.html">
+            <button id="quickButton">Click me!</button>
+        </a>
+    </div>
 <form>
     <div class="container">
         <h1>Register</h1>
@@ -32,6 +39,7 @@
         <button type="button" id="submitData" name="submitData" class="registerbtn">Register</button>
         <h5>Already have an account? <a href="index.html">Sign in here</a></h5>
     </div>
+    <div class="swordline">  </div>
 </form>
 
 </body>
@@ -84,7 +92,7 @@
                 })
                     .then(() => {
                         // Data saved successfully!
-                        alert('user created successfully');
+                        alert('Account successfully created');
                         location.href = 'main.html'
                     })
                     .catch((error) => {
