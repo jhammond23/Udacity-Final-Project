@@ -15,6 +15,68 @@
     left: 0;
     z-index: -1;
   }
+
+/* for index and register pages */
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.container > h1 {
+    color: #78111D;
+    text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
+    font-family: 'Uncial Antiqua';
+    font-size: 1.5em;
+    margin-top: 1em;
+
+}
+.container > p {
+    font-weight: 100;
+    color: #ddd;
+    text-shadow: 0 0 3px #4e060e, 0 0 5px #4e060e;
+    font-family: 'Uncial Antiqua';
+    margin: 0px;
+}
+.container > input {
+    font-family: 'Amatic SC';
+    width: 40%;
+}
+.container, b {
+    font-family: 'Uncial Antiqua';
+    color: #78111D;
+    text-shadow: 0 0 3px #DCC099, 0 0 5px #DCC099;
+}
+.container > button {
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    display: block;
+    border-style: solid;
+    background-color: #78111D;
+    border: 3px solid #4e060e;
+    border-radius: 25px;
+    box-shadow: #DCC099 2px 2px 2px 0px inset, #4e060e 0px 0px 6px 6px inset;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 40px;
+
+}
+.container > h5 {
+    font-weight: 100;
+    font-family: 'Uncial Antiqua';
+    color: #ddd;
+    text-shadow: 0 0 3px #4e060e, 0 0 5px #4e060e;
+    font-size: 20px;
+}
+a {
+    font-weight: 100;
+    font-family: 'Uncial Antiqua';
+    color: dodgerblue;
+    text-shadow: none;
+    font-size: 20px;
+}
 .headerBG {
     background-image: URL("..\\images\\forge.webp");
     z-index: -1;
