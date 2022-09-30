@@ -17,6 +17,9 @@
   }
 
 /* for index and register pages */
+.quicklogBottom {
+    display: none;
+}
 .quicklog {
     width: 100%;
     display: flex;
@@ -122,7 +125,7 @@
     color: #ddd;
     text-shadow: 0 0 3px #4e060e, 0 0 5px #4e060e;
     font-size: 20px;
-    width: 30%;
+    width: 80%;
     text-align: center;
 }
 a {
@@ -603,6 +606,37 @@ label {
 }
 /* On screens that are 500px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
+    .quicklog {
+        display: none;
+    }
+    .quicklogBottom {
+        display:contents;
+        position: relative;
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        margin: auto;
+    }
+    .container > h5 {
+        font-family: 'Amatic SC';
+        height: fit-content;
+        font-size: 25px;
+        border-radius: 25px;
+        text-align: center;
+        color: white;
+        text-shadow: none;
+        font-weight: 700;
+        line-height: 5%;
+    }
+    .container > h5 > a {
+        font-family: 'Amatic SC';
+        height: fit-content;
+        font-size: 25px;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: 700;
+
+    }
     .headerBG {
         height: 700px;
         display: flex;
