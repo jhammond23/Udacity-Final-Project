@@ -18,6 +18,7 @@
 
 /* for index and register pages */
 .quicklog {
+    width: 100%;
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
@@ -56,11 +57,8 @@
 
 }
 #prompt {
-
-    height: auto;
+    height: fit-content;
     font-size: 25px;
-    background-repeat: no-repeat;
-    background-size: 7rem;
     padding: .5em;
     border-radius: 25px;
     text-align: center;
@@ -86,6 +84,7 @@
     text-shadow: 0 0 3px #4e060e, 0 0 5px #4e060e;
     font-family: 'Uncial Antiqua';
     margin: 0px;
+    width: 80%;
 }
 .container > input {
     font-family: 'Amatic SC';
@@ -123,6 +122,8 @@
     color: #ddd;
     text-shadow: 0 0 3px #4e060e, 0 0 5px #4e060e;
     font-size: 20px;
+    width: 30%;
+    text-align: center;
 }
 a {
     font-weight: 100;
