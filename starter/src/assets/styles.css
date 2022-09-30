@@ -614,28 +614,45 @@ label {
         position: relative;
         display: flex;
         width: fit-content;
+        flex-wrap: wrap;
         flex-direction: column;
         margin: auto;
+        height: auto;
     }
     .container > h5 {
         font-family: 'Amatic SC';
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         height: fit-content;
-        font-size: 25px;
+        font-size: 30px;
         border-radius: 25px;
         text-align: center;
         color: white;
         text-shadow: none;
         font-weight: 700;
-        line-height: 5%;
+        line-height: auto;
     }
     .container > h5 > a {
         font-family: 'Amatic SC';
         height: fit-content;
-        font-size: 25px;
+        font-size: 30px;
         border-radius: 25px;
         text-align: center;
         font-weight: 700;
-
+    }
+    #prompt {
+        padding-top: 0px;
+        font-size: 30px;
+    }
+    .quicklogBottom > a {
+        text-align: center;
+    }
+    #prompt > b {
+        font-size: 40px;
+    }
+    .container > input {
+        width: 80%;
     }
     .headerBG {
         height: 700px;
