@@ -31,7 +31,7 @@
     width: 15%;
 
 }
-#quickButton {
+.quickButton {
     width: fit-content;
     height: fit-content;
     font-family: 'Uncial Antiqua';
@@ -59,7 +59,7 @@
     text-shadow: 0 0 1px #DCC099, 0 0 3px #DCC099;
 
 }
-#prompt {
+.prompt {
     height: fit-content;
     font-size: 25px;
     padding: .5em;
@@ -641,14 +641,14 @@ label {
         text-align: center;
         font-weight: 700;
     }
-    #prompt {
+    .prompt {
         padding-top: 0px;
         font-size: 30px;
     }
     .quicklogBottom > a {
         text-align: center;
     }
-    #prompt > b {
+    .prompt > b {
         font-size: 40px;
     }
     .container > input {
@@ -674,6 +674,8 @@ label {
         font-size: 40px;
         font-family: 'Uncial Antiqua';
         margin-top: 50%;
+        animation: fadeIn 3s;
+
     }
     .h1 {
         padding: 15px;
@@ -682,32 +684,36 @@ label {
         font-size: 60px;
         font-family: 'Uncial Antiqua';
         margin-top: 5%;
-        animation: fadeIn 7s;
+        animation: fadeIn 9s;
     }
-
     @keyframes fadeIn {
         0% { opacity: 0; }
+        33% { opacity: 0; }
         100% { opacity: 1; }
       }
       
     @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+        0% { opacity: 0; }
+        33% { opacity: 0; }
+        100% { opacity: 1; }
     }
     
     @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+        0% { opacity: 0; }
+        33% { opacity: 0; }
+        100% { opacity: 1; }
     }
     
     @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+        0% { opacity: 0; }
+        33% { opacity: 0; }
+        100% { opacity: 1; }
     }
     
     @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+        0% { opacity: 0; }
+        33% { opacity: 0; }
+        100% { opacity: 1; }
     }
     #cardsTitle {
         margin-top: 10%;
@@ -833,4 +839,4 @@ label {
     .cart-total > div > p {
         margin: auto;
     }
-  }
+}
