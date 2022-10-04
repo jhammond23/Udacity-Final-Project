@@ -1,0 +1,197 @@
+.main {
+    border-top: 80px solid #101116;
+    min-height: 100%;
+    background-color: black;
+    color: whitesmoke;
+    background-size: contain;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.topwordsborder {
+    background: linear-gradient(to right, teal, tan);
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+.topwords {
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    padding: 1rem;
+}
+.topwords > em {
+    font-size: 2em;
+    margin: 0px;
+}
+.topwords > h1 {
+    font-size: 5em;
+    margin: 0px;
+}
+
+img {
+    box-sizing: border-box;
+    width: 50%;
+    text-align: right;
+    height: auto;
+    border: 50px solid #101116;
+    border-top: none;
+    margin-bottom: 100px;
+}
+
+
+.title {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 4em;
+    margin: 8% 35% 5% 35%;
+    text-align: center;
+    padding: 50px 25px 50px 25px;
+    border-radius: 50px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    border: 5px solid black;
+    box-shadow: 0 0 30px black;
+    box-shadow: inset 0px 0px 20px black;
+    background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
+}
+.projectscontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height:475px;
+    background-color: #101116;
+    z-index: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 600px;
+    overscroll-behavior-inline: contain;
+    overflow-x: auto;
+    margin-top: 5px;
+}
+.projectscontainerboarder {
+    height: 495px;
+    width: 100%;
+    background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
+    animation: glowing 20s linear infinite;
+}
+.project {
+    height: 250px;
+    width: 450px;
+    margin: 50px;
+    font-size: 50px;
+    color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 0 0 20px black;
+    cursor: pointer;
+    position: relative;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+.project:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.project:hover:before {
+    opacity: 1;
+}
+
+.project:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+a > div > button {
+    box-sizing: border-box;
+    width: 80%;
+    top: 110%;
+    left: 10%;
+    padding: 25px 15px 25px 15px;
+    border-radius: 50px;
+    color: whitesmoke;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    border: 5px solid black;
+    box-shadow: 0 0 30px black;
+    box-shadow: inset 0px 0px 20px black;
+    background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
+    position: relative;
+    z-index: 10;
+    font-size: .5em;
+    cursor: pointer;
+}
+.ecom {
+    background-image: url('./portfolio_photos/ecomlogin.png');
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size:cover;
+    background-position: center;
+}
+.cards {
+    background-image: url('./portfolio_photos/cardsback.png');
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.rps {
+    background-image: url('./portfolio_photos/rps.jfif');
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.tbag {
+    background-image: url('./portfolio_photos/woods.jfif');
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.aboutme {
+    background-color: black;
+    color: whitesmoke;
+    width: 100%;
+    height: fit-content;
+}
+.overview {
+    margin: 0% 5% 5% 50%;
+    text-align: center;
+    font-size: 20px;
+    padding: 3%;
+}
