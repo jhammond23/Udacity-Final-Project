@@ -299,6 +299,18 @@ body {
     box-shadow: inset 0px 0px 20px teal;
 
 }
+.message {
+    display: flex;
+    font-size: 1.5em;
+    color: whitesmoke;
+    width: 60%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+
+}
 .contact > h1 {
     color: whitesmoke;
     background-color: teal;
@@ -315,7 +327,7 @@ body {
     margin: 1%;
     border-radius: 25px;
     padding: 15px;
-    border: 4px solid teal;
+    border: 10px solid teal;
     box-shadow: 0px 0px 30px black;
 }
 
@@ -328,7 +340,7 @@ body {
     margin: 2%;
     border-radius: 25px;
     padding: 15px;
-    border: 4px solid teal;
+    border: 10px solid teal;
     box-shadow: 0px 0px 30px black;
 }
 
