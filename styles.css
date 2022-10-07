@@ -409,3 +409,62 @@ body {
     cursor: pointer;
     transition: ease 0.4s;
 }
+
+#aboutmyprojects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    background: #101116;
+    padding: 25px 0px;
+    border-top: 10px solid teal;
+    border-bottom: 10px solid teal;
+    margin-bottom: 5%;
+
+}
+#aboutmyprojects > h1 {
+    font-family: 'Uncial Antiqua';
+    color: #78111D;
+    text-shadow: 0 0 1px #DCC099, 0 0 3px #DCC099;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 3%;
+    font-size: 2em;
+}
+.ecomcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.about-ecom {
+    width: 45%;
+    order: 1;
+    margin: 5%;
+    text-align: center;
+}
+.ecomcontainer > video {
+    width: 45%;
+    border: 25px solid black;
+    order: 2;
+}
+.about-ecom > a > button {
+    width: 185px;
+    font-size: 1em;
+    color: whitesmoke;
+    background-color: #78111D;
+    padding: 5px;
+    border: 3px solid black;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+.about-ecom > a > button:hover {
+    background-color: #6a000c;
+    cursor: pointer;
+}
