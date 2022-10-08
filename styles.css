@@ -49,6 +49,7 @@ html {
 }
 .topbuttons > a {
     width: 185px;
+    line-height: 3em;
     font-size: 1em;
     color: whitesmoke;
     background-color: transparent;
@@ -578,10 +579,24 @@ body {
     font-size: 1.25em;
 }
 .about-rps > a > button:hover {
-    background-color: rgb(5, 170, 170);
+    background-color: rgb(34, 255, 255);
     cursor: pointer;
     transform: scale(1.05);
 
+}
+.about-ecom > b {
+    color: #78111D;
+    text-shadow: 0 0 1px #DCC099;
+    font-size: 1.15em;
+}
+.about-cards > b {
+    color: rgb(23, 223, 223);
+}
+.about-rps > b {
+    color: rgb(23, 223, 223);
+}
+.about-tbag > b {
+    color: rgb(23, 223, 223);
 }
 #aboutmyprojects > h1:nth-child(7) {
     color: teal;
