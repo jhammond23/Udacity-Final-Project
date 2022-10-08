@@ -528,3 +528,112 @@ body {
     transform: scale(1.05);
 
 }
+
+#aboutmyprojects > h1:nth-child(5) {
+    color: teal;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 0%;
+    font-size: 2em;
+    padding: 50px 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: none;
+    background-color: black;
+    border-top: 10px solid teal;
+
+}
+.rpscontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #101116;
+
+}
+.about-rps {
+    width: 45%;
+    order: 1;
+    margin: 5%;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+.rpscontainer > video {
+    width: 45%;
+    padding: 25px;
+    order: 2;
+    background-color: #000;
+}
+.about-rps > a > button {
+    width: 185px;
+    font-size: 1em;
+    color: whitesmoke;
+    background-color: teal;
+    padding: 5px;
+    border: 3px solid black;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+.about-rps > a > button:hover {
+    background-color: rgb(5, 170, 170);
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+#aboutmyprojects > h1:nth-child(7) {
+    color: teal;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 0%;
+    font-size: 2em;
+    padding: 50px 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: none;
+    background-color: black;
+    border-top: 10px solid teal;
+
+}
+.tbagcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: black;
+
+}
+.about-tbag {
+    width: 45%;
+    order: 2;
+    margin: 5%;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+.tbagcontainer > video {
+    width: 45%;
+    padding: 25px;
+    order: 1;
+    background-color: #101116;
+}
+.about-tbag > a > button {
+    width: 185px;
+    font-size: 1em;
+    color: whitesmoke;
+    background-color: teal;
+    padding: 5px;
+    border: 3px solid black;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 0 5px black, 0 0 10px black;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
+.about-tbag > a > button:hover {
+    background-color: rgb(5, 170, 170);
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
