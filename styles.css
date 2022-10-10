@@ -13,6 +13,7 @@ html {
     flex-direction: row;
     justify-content: space-between;
 }
+
 .contactmebottombtn {
     position: fixed;
     bottom: 2%;
@@ -41,7 +42,6 @@ html {
 .topbuttons {
     height: 100px;
     display: flex;
-    gap: 1em;
     align-items: center;
     width: 100%;
     background-color: #101116;
@@ -49,6 +49,7 @@ html {
 }
 .topbuttons > a {
     width: 185px;
+    height: 30%;
     line-height: 3em;
     font-size: 1em;
     color: whitesmoke;
@@ -58,8 +59,7 @@ html {
     border-right: 3px solid teal;
     text-decoration: none;
     text-align: center;
-    text-shadow: 0 0 5px black, 0 0 10px black;
-    
+    text-shadow: 0 0 5px black, 0 0 10px black;    
 }
 .topbuttons > a:nth-child(4){
     border-right: none;
@@ -75,8 +75,8 @@ html {
     background-size: cover;
     padding-right: 0px;
     width: auto;
-    height: 150px;
-    margin-top: 70%;
+    height: 100px;
+    margin-top: auto;
 }
 .differentcontactbutton > img:hover {
     transform: scale(1.05);
@@ -116,7 +116,7 @@ html {
     margin: 0px;
 }
 
-img {
+.main > img {
     box-sizing: border-box;
     width: 50%;
     text-align: right;
@@ -143,6 +143,16 @@ img {
     box-shadow: inset 0px 0px 20px black;
     background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
 }
+.projectstitle, .aboutmetitle {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    background-color: transparent;
+    margin-top: 5%;
+    margin-bottom: 2;
+    box-sizing: border-box;
+}
+
 .projectscontainer {
     display: flex;
     flex-direction: row;
@@ -156,14 +166,17 @@ img {
     grid-auto-columns: 600px;
     overscroll-behavior-inline: contain;
     overflow-x: auto;
-    margin-top: 5px;
+    margin-top: 10px;
+    position: relative;
 }
+
 .projectscontainerboarder {
-    height: 385px;
+    position: relative;
+    height: 395px;
     width: 100%;
-    background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
-    animation: glowing 20s linear infinite;
+    background: teal;
 }
+
 .project {
     height: 250px;
     width: 450px;
@@ -267,18 +280,22 @@ a > div > button {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
+
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #101116;
-  }
+    background: transparent;
+    width: fit-content;
+    }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background-color:black;
-    border: 1px solid black;
+    border-radius: 20px;
+    border: 6px solid black;
+    background-clip: content-box;
   }
   
   /* Handle on hover */
@@ -290,15 +307,20 @@ a > div > button {
     display: none;
   }
 
-
+.aboutmetitle {
+    font-weight: 300;
+}
+.aboutmetitle > b {
+    color:rgb(5, 223, 223);
+}
 .aboutme {
     background-color: black;
     color: whitesmoke;
     width: 100%;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .aboutme > img {
     width: 40%;
@@ -420,11 +442,12 @@ body {
     align-items: center;
     background: #101116;
     padding: 25px 0px;
-    border-top: 10px solid teal;
     border-bottom: 10px solid teal;
+    border-top: 10px solid teal;
     margin-bottom: 5%;
 
 }
+
 #aboutmyprojects > h1 {
     font-family: 'Uncial Antiqua';
     color: #78111D;
@@ -651,4 +674,77 @@ body {
     cursor: pointer;
     transform: scale(1.05);
 
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .topbuttons {
+        width: 100%;
+    }
+    .topbuttons > a {
+        line-height: 20px;
+        font-size: 3vw;
+        margin: 0px;
+        text-align: center;
+
+    }
+    .differentcontactbutton {
+        display: none;
+    }
+    .topwordsborder {
+        max-width: 50%;
+    }
+    .topwords > em {
+        font-size: 2vw;
+    }
+    .topwords > h1 {
+        font-size: 5vw;
+    }
+    .main > img {
+        border: 20px solid #101116;
+        border-top: none;
+        width: 50%;
+        margin: auto;
+    }
+    .projectstitle, .aboutmetitle {
+        font-size: 6vw;
+        margin-top: 15%;
+    }
+    .project {
+        transform: scale(.5);
+        margin: 0px;
+    }
+    .project:hover {
+        transform: scale(.5);
+    }
+    .projectscontainer {
+        height: fit-content;
+        border-bottom: 10px solid teal;
+        grid-auto-columns: 275px;
+    }
+    .projectscontainerboarder {
+        height: fit-content;
+    }
+    .aboutme {
+        display: block;
+    }
+    .aboutme > img {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .overview {
+        width: 90%;
+    }
+    .ecomcontainer {
+        display: block;
+
+    }
+    .ecomcontainer > video {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
 }
