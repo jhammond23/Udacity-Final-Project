@@ -714,7 +714,7 @@ body {
         margin-top: 15%;
     }
     .project {
-        transform: scale(.5);
+        transform: scale(.7);
         margin: 0px;
     }
     .project:hover {
@@ -723,7 +723,7 @@ body {
     .projectscontainer {
         height: fit-content;
         border-bottom: 10px solid teal;
-        grid-auto-columns: 275px;
+        grid-auto-columns: 375px;
     }
     .projectscontainerboarder {
         height: fit-content;
@@ -746,5 +746,52 @@ body {
         display: block;
         width: 80%;
         margin: auto;
+    }
+    .about-ecom {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .tccontainer {
+        display: block;
+
+    }
+    .tccontainer > video {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .about-cards {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .rpscontainer {
+        display: block;
+
+    }
+    .rpscontainer > video {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .about-rps {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .tbagcontainer {
+        display: block;
+
+    }
+    .tbagcontainer > video {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .about-tbag {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
     }
 }
