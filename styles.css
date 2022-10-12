@@ -847,7 +847,7 @@ input, textarea {
         text-align: center;
         margin: auto;
         margin-top: 10%;
-        font-size: 3.5vw;
+        font-size: 3.85vw;
         width: 80%;
 
     }
@@ -858,6 +858,7 @@ input, textarea {
     .projectstitle {
         border-top: none;
         padding-bottom: 0px;
+        margin-top: 30%;
     }
     .aboutmetitle {
         margin-top: 0px;
