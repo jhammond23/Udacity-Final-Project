@@ -1,4 +1,4 @@
-html {
+*{
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
 }
@@ -13,7 +13,7 @@ html {
     justify-content: space-between;
 }
 .topbg {
-    background: linear-gradient(to bottom, #000e10, black, black);
+    background: linear-gradient(to bottom, #101116, black, black);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -61,7 +61,6 @@ html {
     width: 100%;
     background-color: #101116;
     justify-content: flex-start;
-    border-bottom: 2px solid teal;
     z-index: 10;
 }
 .topbuttons > a {
@@ -112,20 +111,26 @@ html {
     color: rgb(11, 255, 255);
 }
 .topwordsborder {
-    background: linear-gradient(to right, teal, tan);
+    background: transparent;
     width: fit-content;
     height: auto;
     text-align: center;
     margin: auto;
     padding: 1rem;
+    border-radius: 5px 5px 5px 5px;
+    position: relative;
+
 }
 .topwords {
     width: fit-content;
     height: auto;
     text-align: center;
     margin: auto;
-    background-color: #101116;
-    padding: 1rem;
+    background-color: transparent;
+    padding: 1.5rem;
+    border-radius: 5px 5px 5px 5px;
+    border: 10px solid teal;
+
 }
 .topwords > em {
     font-size: 1.75em;
@@ -143,13 +148,23 @@ html {
     height: auto;
     border: 50px solid #101116;
     border-top: none;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     z-index: 1;
-    box-shadow: teal 0 0 36px;
-    clip-path: inset(-2px 0px -2px -2px);
+    border-radius: 0 0 0 30%;
 }
 .topquote {
     display: none;
+}
+.topquote-top {
+    display: flex;
+    text-align: center;
+    margin-top: 0px;
+    font-size: .95em;
+    width: 100%;
+    position: absolute;
+    top: 105%;
+    letter-spacing: .35em;
+    right: -2%;
 }
 
 .title {
@@ -171,10 +186,9 @@ html {
     width: 100%;
     text-align: center;
     font-size: 2em;
-    margin-bottom: 2;
     box-sizing: border-box;
     font-weight: 300;
-    background: linear-gradient(to top, black, #00252b);
+    background: linear-gradient(to top, black, #101116);
     box-shadow: inset black 0 0 40px;
     margin-top: 0px;
     padding-top: 2%;
@@ -198,7 +212,6 @@ html {
     grid-auto-columns: 600px;
     overscroll-behavior-inline: contain;
     overflow-x: auto;
-    margin-top: 10px;
     position: relative;
 }
 
@@ -347,7 +360,7 @@ a > div > button {
     margin-bottom: 2;
     box-sizing: border-box;
     font-weight: 300;
-    background: linear-gradient(to bottom, black, #00252b);
+    background: linear-gradient(to bottom, black, #101116);
     box-shadow: inset black 0 0 40px;
     margin-top: 0px;
     padding-top: 4%;
@@ -525,8 +538,7 @@ input, textarea {
     border: 25px solid black;
     order: 2;
     background-color: black;
-    box-shadow: teal 0 0 36px;
-    clip-path: inset(-2px -2px -2px -2px);
+    border-radius: 15px;
 }
 .about-ecom > a > button {
     width: 185px;
@@ -582,8 +594,8 @@ input, textarea {
     padding: 25px;
     order: 1;
     background-color: black;
-    box-shadow: teal 0 0 36px;
-    clip-path: inset(-2px -2px -2px -2px);
+    border-radius: 15px;
+
 }
 .about-cards > a > button {
     width: 185px;
@@ -639,9 +651,7 @@ input, textarea {
     padding: 25px;
     order: 2;
     background-color: #000;
-    box-shadow: teal 0 0 36px;
-    clip-path: inset(-2px -2px -2px -2px);
-    
+    border-radius: 15px;  
 }
 .about-rps > a > button {
     width: 185px;
@@ -710,8 +720,8 @@ input, textarea {
     padding: 25px;
     order: 1;
     background-color: black;
-    box-shadow: teal 0 0 36px;
-    clip-path: inset(-2px -2px -2px -2px);
+    border-radius: 15px;
+
 }
 .about-tbag > a > button {
     width: 185px;
@@ -738,6 +748,7 @@ input, textarea {
 
 
 @media screen and (max-width: 1000px) {
+
     .topbuttons {
         width: 100%;
         display: flex;    }
@@ -756,6 +767,7 @@ input, textarea {
         background-color: #101116;
         padding: 16px;
         font-size: 16px;
+        border: none;
     }
     .dropbtn > div {
         width: 35px;
@@ -822,12 +834,13 @@ input, textarea {
         font-size: 5vw;
     }
     .topbg > img {
-        border: 10% solid #101116;
+        border: 15px solid #101116;
         width: 70%;
         margin: auto;
         clip-path: inset(0px 0px 0px 0px);
         box-sizing: initial;
-
+        border-radius: 25px;
+        box-shadow: none;
     }
     .topquote {
         display: flex;
@@ -837,12 +850,17 @@ input, textarea {
         font-size: 3.5vw;
         width: 80%;
 
-
-
     }
     .projectstitle, .aboutmetitle {
         font-size: 5vw;
         margin-top: 15%;
+    }
+    .projectstitle {
+        border-top: none;
+        padding-bottom: 0px;
+    }
+    .aboutmetitle {
+        margin-top: 0px;
     }
     .project {
         transform: scale(.7);
@@ -865,6 +883,7 @@ input, textarea {
     }
     .aboutmetitle {
         margin-top: 0px;
+        border-bottom: 2px solid teal;
     }
     .aboutme > img {
         width: 100%;
