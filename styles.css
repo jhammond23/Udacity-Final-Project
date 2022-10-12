@@ -19,6 +19,15 @@ html {
     flex-direction: row;
     justify-content: space-between;
 }
+#topname {
+    display: none;
+}
+.dropbtn {
+    display: none;
+}
+.dropdown-content {
+    display: none;
+}
 
 .contactmebottombtn {
     position: fixed;
@@ -72,7 +81,7 @@ html {
     justify-content: center;
     align-items: center;
 }
-.topbuttons > a:nth-child(4){
+.topbuttons > a:nth-child(5){
     border-right: none;
 
 }
@@ -139,7 +148,9 @@ html {
     box-shadow: teal 0 0 36px;
     clip-path: inset(-2px 0px -2px -2px);
 }
-
+.topquote {
+    display: none;
+}
 
 .title {
     box-sizing: border-box;
@@ -729,7 +740,7 @@ input, textarea {
 @media screen and (max-width: 1000px) {
     .topbuttons {
         width: 100%;
-    }
+        display: flex;    }
     .topbuttons > a {
         display: flex;
         justify-content: center;
@@ -737,12 +748,70 @@ input, textarea {
         font-size: 3vw;
         margin: 0px;
         align-items: center;
+        display: none;
+
     }
+    .dropbtn {
+        display: initial;
+        background-color: teal;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: 2px solid whitesmoke;
+        border-radius: 15px;
+        width: 100%;
+    }
+      
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+      
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+      
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+      
+    .dropdown:hover .dropbtn {
+        background: linear-gradient(to bottom right, #5aacf0, rgb(11, 190, 190), rgb(0, 100, 100));
+    }
+
+    #topname {
+        display: flex;
+        font-size: 5vw;
+        width: fit-content;
+        margin: auto;
+        font-weight:400;
+        letter-spacing: .25em;
+    }
+    .right {
+        display: none;
+    };
     .differentcontactbutton {
         display: none;
     }
     .topwordsborder {
         max-width: 50%;
+        display: none;
     }
     .topwords > em {
         font-size: 2vw;
@@ -751,13 +820,26 @@ input, textarea {
         font-size: 5vw;
     }
     .topbg > img {
-        border: 20px solid #101116;
-        border-top: none;
-        width: 50%;
+        border: 10% solid #101116;
+        width: 70%;
         margin: auto;
+        clip-path: inset(0px 0px 0px 0px);
+        box-sizing: initial;
+
+    }
+    .topquote {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        margin-top: 10%;
+        font-size: 3.5vw;
+        width: 80%;
+
+
+
     }
     .projectstitle, .aboutmetitle {
-        font-size: 6vw;
+        font-size: 5vw;
         margin-top: 15%;
     }
     .project {
@@ -769,14 +851,18 @@ input, textarea {
     }
     .projectscontainer {
         height: fit-content;
-        border-bottom: 10px solid teal;
+        border-bottom: 10px solid black;
         grid-auto-columns: 375px;
     }
     .projectscontainerboarder {
         height: fit-content;
+        border-top: 10px solid black;
     }
     .aboutme {
         display: block;
+    }
+    .aboutmetitle {
+        margin-top: 0px;
     }
     .aboutme > img {
         width: 100%;
