@@ -753,13 +753,15 @@ input, textarea {
     }
     .dropbtn {
         display: initial;
-        background-color: teal;
-        color: white;
+        background-color: #101116;
         padding: 16px;
         font-size: 16px;
-        border: 2px solid whitesmoke;
-        border-radius: 15px;
-        width: 100%;
+    }
+    .dropbtn > div {
+        width: 35px;
+        height: 5px;
+        background-color: whitesmoke;
+        margin: 6px 0;
     }
       
     .dropdown {
