@@ -30,6 +30,7 @@
 }
 
 .contactmebottombtn {
+    display: none;
     position: fixed;
     bottom: 2%;
     right: 2%;
@@ -745,9 +746,6 @@ input, textarea {
     transform: scale(1.05);
 
 }
-
-
-
 
 
 @media screen and (max-width: 1000px) {
