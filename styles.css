@@ -885,6 +885,7 @@ input, textarea {
     }
     .aboutme {
         display: block;
+
     }
     .aboutmetitle {
         margin-top: 0px;
@@ -896,6 +897,8 @@ input, textarea {
     }
     .overview {
         width: 90%;
+        font-size: 3.85vw;
+
     }
     .ecomcontainer {
         display: block;
@@ -910,6 +913,8 @@ input, textarea {
         width: 80%;
         margin: auto;
         margin-top: 5%;
+        font-size: 3.85vw;
+
     }
     .tccontainer {
         display: block;
@@ -924,6 +929,7 @@ input, textarea {
         width: 80%;
         margin: auto;
         margin-top: 5%;
+        font-size: 3.85vw;
     }
     .rpscontainer {
         display: block;
@@ -938,6 +944,8 @@ input, textarea {
         width: 80%;
         margin: auto;
         margin-top: 5%;
+        font-size: 3.85vw;
+
     }
     .tbagcontainer {
         display: block;
@@ -952,5 +960,34 @@ input, textarea {
         width: 80%;
         margin: auto;
         margin-top: 5%;
+        font-size: 3.85vw;
+    }
+
+
+
+    /*Connect with me page*/
+    .contact > h1 {
+        font-size: 7vw;
+    }
+    .message {
+        font-size: 4vw;
+        width: 85%;
+        margin: auto;
+        margin-bottom: 10%;
+    }
+    .inputfield > input {
+        font-size: 4vw;
+        padding: .5em;
+        border: 5px solid teal;
+    }
+    .biginputfield > textarea {
+        border: 5px solid teal;
+        padding: .5em;
+        font-size: 4vw;
+        width: 80%;
+        padding-bottom: 40%;
+    }
+    .contact > form > button {
+        font-size: 5vw;
     }
 }
