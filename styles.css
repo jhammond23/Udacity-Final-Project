@@ -750,6 +750,9 @@ input, textarea {
 
 @media screen and (max-width: 1000px) {
 
+    .contactmebottombtn {
+        display:block;
+    }
     .topbuttons {
         width: 100%;
         display: flex;    }
