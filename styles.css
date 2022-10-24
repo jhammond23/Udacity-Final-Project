@@ -20,7 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
-#topname {
+.topname {
     display: none;
 }
 .dropbtn {
@@ -472,8 +472,8 @@ input, textarea {
     background-color: whitesmoke;
     font-size: 1.5em;
     margin: 1%;
-    border-radius: 25px;
-    padding: 15px;
+    border-radius: 8px;
+    padding: 8px;
     border: 10px solid teal;
     box-shadow: 0px 0px 30px black;
 }
@@ -484,7 +484,7 @@ input, textarea {
     font-size: 1.5em;
     width: 40%;
     margin: 2%;
-    border-radius: 25px;
+    border-radius: 8px;
     padding: 15px;
     border: 10px solid teal;
     box-shadow: 0px 0px 30px black;
@@ -494,7 +494,7 @@ input, textarea {
 }
 
 .contact > form > button {
-    padding: 25px 50px 25px 50px;
+    padding: 15px 40px 15px 40px;
     border-radius: 50px;
     color: whitesmoke;
     text-shadow: 0 0 5px black, 0 0 10px black;
@@ -831,13 +831,14 @@ input, textarea {
         background: linear-gradient(to bottom right, #5aacf0, rgb(11, 190, 190), rgb(0, 100, 100));
     }
 
-    #topname {
+    .topname {
         display: flex;
         font-size: 5vw;
         width: fit-content;
         margin: auto;
         font-weight:400;
         letter-spacing: .25em;
+        color: whitesmoke;
     }
     .right {
         display: none;
@@ -863,7 +864,7 @@ input, textarea {
         box-sizing: initial;
         border-radius: 25px;
         box-shadow: none;
-        margin-top: 40%;
+        margin-top: 50%;
     }
     .topquote {
         display: flex;
@@ -872,26 +873,27 @@ input, textarea {
         margin-top: 10%;
         font-size: 3.85vw;
         width: 80%;
+        margin-bottom: 50%;
 
     }
     .projectstitle, .aboutmetitle {
         font-size: 5vw;
-        margin-top: 15%;
     }
     .projectstitle {
-        border-top: none;
         padding-bottom: 0px;
-        margin-top: 30%;
+        border-top: 2px solid teal;
+        padding-top: 5%;
     }
     .aboutmetitle {
         margin-top: 0px;
+        margin-top: 15%;
     }
     .project {
-        transform: scale(.7);
+        transform: scale(.6);
         margin: 0px;
     }
     .project:hover {
-        transform: scale(.75);
+        transform: scale(.65);
     }
     .projectscontainer {
         height: fit-content;
@@ -1008,5 +1010,16 @@ input, textarea {
     }
     .contact > form > button {
         font-size: 5vw;
+    }
+    .resumepage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+    .resumepage > img{
+        width: 80vw;
+        height: auto;
+        align-items: center;
     }
 }
