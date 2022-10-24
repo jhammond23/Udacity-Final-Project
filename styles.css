@@ -3,6 +3,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/*index html*/
 .main {
     min-height: 100%;
     color: whitesmoke;
@@ -87,26 +88,43 @@
     border-right: none;
 
 }
+.right {
+    margin-left: auto;
+    margin-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 80px;
+    margin-top: -10px;
+}
 .differentcontactbutton {
     width: fit-content;
     height: fit-content;
-
 }
 .differentcontactbutton > img {
     background-position: center;
     background-size: cover;
     padding-right: 0px;
     width: auto;
-    height: 100px;
+    height: 90px;
     margin-top: auto;
+    opacity: .9;
 }
 .differentcontactbutton > img:hover {
     transform: scale(1.05);
     z-index: 0;
+    opacity: 1;
 }
-.right {
+.resumeBtn > img:hover {
+    transform: scale(1.05);
+    z-index: 0;
+    opacity: 1;
+}
+.resumeBtn > img{
     margin-left: auto;
     margin-right: 3%;
+    height: 90px;
+    opacity: .9;
 }
 .topbuttons > a:hover {
     transition: ease 0.4s;
@@ -171,6 +189,8 @@
     right: -2%;
 }
 
+
+
 .title {
     box-sizing: border-box;
     width: 100%;
@@ -187,7 +207,7 @@
     background: linear-gradient(to bottom right, rgb(6, 244, 244), teal, rgb(2, 37, 37));
 }
 .projectstitle {
-    width: 100%;
+    width: 99vw;
     text-align: center;
     font-size: 2em;
     box-sizing: border-box;
@@ -199,15 +219,13 @@
     padding-bottom: 4%;
     text-shadow: #000 2px 2px;
     border-top: 10px solid teal;
-
-    
 }
 
 .projectscontainer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 99vw;
     height: 375px;
     background-color: #101116;
     z-index: 0;
@@ -215,7 +233,7 @@
     grid-auto-flow: column;
     grid-auto-columns: 600px;
     overscroll-behavior-inline: contain;
-    overflow-x: auto;
+    overflow-x: scroll;
     position: relative;
 }
 
