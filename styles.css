@@ -525,6 +525,28 @@ input, textarea {
     transition: ease 0.4s;
 }
 
+
+.usedLan > img {
+    height: 60px;
+    margin-bottom: 5%;
+    margin-right: 5%;
+}
+.about-ecom > .usedLan > img:nth-child(1) {
+    height: 70px;
+}
+.about-ecom > .usedLan > img:nth-child(2) {
+    height: 60px;
+    margin-right: 2%;
+}
+.about-ecom > .usedLan > img:nth-child(3) {
+    height: 65px;
+    margin-right: 2%;
+}
+
+.about-cards > .usedLan > img:nth-child(1) {
+    height: 70px;
+}
+
 #aboutmyprojects {
     display: flex;
     flex-direction: column;
