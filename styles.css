@@ -351,6 +351,24 @@ a > div > button {
     background-size:cover;
     background-position: center;
 }
+.mhub {
+    background-image: url('./mirandushub/pics/darkelf3x2.jpg');
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-size:cover;
+    background-position: center;
+}
+.mhub > button {
+    position: relative;
+}
+.mhub > button::after {
+    content: '(In-Progress)';
+    font-size: .75em;
+    top: 425%;
+    position: absolute;
+    right: 35%;
+}
 .cards {
     background-image: url('./portfolio_photos/cardsback.png');
     height: 100%;
@@ -576,14 +594,13 @@ input, textarea {
     justify-content: space-between;
     align-items: center;
     background: #101116;
-    padding: 25px 0px;
     border-bottom: 10px solid teal;
     border-top: 10px solid teal;
     margin-bottom: 5%;
 
 }
 
-#aboutmyprojects > h1 {
+#aboutmyprojects > h1:nth-child(1) {
     font-family: 'Uncial Antiqua';
     color: #78111D;
     text-shadow: 0 0 1px #DCC099, 0 0 3px #DCC099;
@@ -592,6 +609,7 @@ input, textarea {
     text-align: center;
     margin-bottom: 3%;
     font-size: 2em;
+    border-top: none;
 }
 .ecomcontainer {
     display: flex;
@@ -601,7 +619,7 @@ input, textarea {
 }
 .about-ecom {
     width: 45%;
-    order: 1;
+    order: 2;
     margin: 5%;
     text-align: center;
     line-height: 1.5em;
@@ -610,7 +628,7 @@ input, textarea {
 .ecomcontainer > video {
     width: 45%;
     border: 25px solid black;
-    order: 2;
+    order: 1;
     background-color: black;
     border-radius: 15px;
 }
@@ -634,7 +652,7 @@ input, textarea {
 }
 
 
-#aboutmyprojects > h1:nth-child(3) {
+#aboutmyprojects > h1:nth-child(4) {
     color: teal;
     width: 100%;
     height: fit-content;
@@ -648,6 +666,83 @@ input, textarea {
     border-top: 10px solid teal;
 
 }
+#aboutmyprojects > h1:nth-child(3) {
+    font-family: 'MedievalSharp';
+    color: #f6df52;
+    text-shadow: 0 2px 8px #790cbd;
+    border-top: 10px solid teal;
+}
+.mhubcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #101116;
+
+}
+.mhubcontainer > video {
+    width: 45%;
+    padding: 25px;
+    order: 2;
+    background-color: #000;
+    border-radius: 15px;
+
+}
+.about-mhub {
+    width: 45%;
+    order: 1;
+    margin: 5%;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+.about-mhub > a > button {
+    width: fit-content;
+    font-size: 1em;
+    background-color: rgb(65, 71, 77);
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'MedievalSharp';
+    color: #f6df52;
+    text-shadow: 0 2px 8px #790cbd;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+.about-mhub > a > button:hover {
+    letter-spacing: 3px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .5s ease;
+
+}
+.about-mhub > a > button:hover::after {
+    content: '';
+    height: 1.5rem;
+    width: 1.5rem;
+    background-image: url('./mirandushub/pics/materium-logo.webp');
+    z-index: 3;
+    display: block;
+    bottom: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: bounce-in-out-top infinite 2s;
+    border-radius: 50%;
+    box-shadow: 0 1px 10px #790cbd;
+}
+@-webkit-keyframes bounce-in-out-top {
+    0% {
+      left: -20%;
+    }
+    50% {
+      left: -25%;
+    }
+    100% {
+      left: -20%;    
+    }
+  }
+
 .tccontainer {
     display: flex;
     flex-direction: row;
@@ -691,7 +786,7 @@ input, textarea {
 
 }
 
-#aboutmyprojects > h1:nth-child(5) {
+#aboutmyprojects > h1 {
     color: teal;
     width: 100%;
     height: fit-content;
@@ -1003,6 +1098,22 @@ input, textarea {
         margin: auto;
         margin-top: 5%;
         font-size: 3.85vw;
+    }
+    .mhubcontainer {
+        display: block;
+
+    }
+    .mhubcontainer > video {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .about-mhub {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        font-size: 3.85vw;
+
     }
     .rpscontainer {
         display: block;
