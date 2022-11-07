@@ -162,25 +162,25 @@ body {
 
 @-webkit-keyframes bounce-in-out {
   0% {
-    left: -17%;
+    left: -60px;
   }
   50% {
-    left: -21%;
+    left: -80px;
   }
   100% {
-    left: -17%;    
+    left: -60px;    
   }
 }
 
 @-webkit-keyframes bounce-in-out-top {
   0% {
-    left: -23%;
+    left: -15px;
   }
   50% {
-    left: -19%;
+    left: -20px;
   }
   100% {
-    left: -23%;    
+    left: -15px;    
   }
 }
 
