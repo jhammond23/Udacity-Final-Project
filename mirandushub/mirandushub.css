@@ -310,7 +310,7 @@ nav{
   pointer-events: none;
   transform: translateY(-10);
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
-  z-index: 1;
+  z-index: 5;
 }
 
 .dropdown.active > .link + .dropdown-menu {
