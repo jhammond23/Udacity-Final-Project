@@ -317,7 +317,7 @@ nav{
   position: absolute;
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  gap: 1rem;
+  gap: .25rem;
 }
 
 .dropdown-links {
@@ -382,6 +382,22 @@ nav{
   .burger{
     display: block;
   }
+  button.link {
+    background-color: #11111160;
+    border-radius: 15px;
+    height: 150px;
+    width: 250px;
+    border: 3px solid #111;
+    box-shadow: 0 4px 12px 0 black;
+  }
+  button.link:focus {
+    background-color: #ccddee30;
+  }
+  .nav-links > a:hover::after, 
+.dropdown > button:hover::after, 
+.dropdown > button:focus::after {
+  display: none;
+}
  
 }
 @media only screen and (max-width: 640px){
@@ -401,7 +417,7 @@ nav{
     transition:All 0.5s ease;
   }
   .dropdown .dropdown-menu {
-    left: -30%;
+    left: 0%;
   }
   .more-than-6 {
     grid-template-columns: repeat(1, max-content);
