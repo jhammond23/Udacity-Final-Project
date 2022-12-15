@@ -1,0 +1,1791 @@
+* {
+  text-decoration: none;
+  font-family: 'Iowan', 'MedievalSharp', 'Serif';
+
+}
+
+html {
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+body, .body {
+  background-image: linear-gradient(#3774b117 .1em, transparent .1em), linear-gradient(90deg, #3774b117 .1em, transparent .1em);
+  background-color: #111;
+  margin: 0px;
+  overflow-x: clip;
+  font-size: 1.1em;
+  background-size: 3em 3em;
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  z-index: -1;
+}
+button:focus {
+  outline: none;
+}
+
+
+
+#logo{
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #f6df52;
+  text-shadow: 0 2px 8px #790cbd;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#logo:hover {
+  transform: scale(1.05);
+  transition: all .5s ease;
+}
+
+#menu {
+  padding-top: 20vh;
+  align-items:flex-start;
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+}
+
+#menu-items {
+  margin-left: clamp(2rem, 10vw, 24rem);
+  position: relative;
+  z-index: 2;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -20%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -42%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -60%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -80%;
+}
+
+#menu[data-active-index="4"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: center -6%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: center -8%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: center -10%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: center -12%;
+}
+
+#menu[data-active-index="4"] > #menu-background-image {
+  background-position: center -14%;
+}
+#menu-background-pattern {
+  background-image: linear-gradient(#3774b117 .1em, transparent .1em), linear-gradient(90deg, #3774b117 .1em, transparent .1em);
+  background-size: 3em 3em;
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  height: 130vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, 
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100vw;
+  z-index: -1;
+}
+
+#menu-background-image {
+  background-image: url("./pics/Mirandus_Encounter_2.jpg");
+  background-position: center -8%;
+  background-size: 125vmax;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0px;  
+  opacity: 0.25;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100%;
+  z-index: -1;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu-items:hover ~ #menu-background-image {
+  background-size: 130vmax;
+  opacity: 0.1;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover .menu-item:hover {
+  opacity: 1;
+  color: #fcfcfc;
+  transition: all 400ms ease;
+  letter-spacing: .1em;
+  text-shadow: 0 2px 8px #3630cd;
+}
+
+.four:hover {
+  text-decoration: none;
+  font-style: none;
+}
+.menu-item {
+  color: #cde;
+  cursor: pointer;
+  display: block;
+  font-size: clamp(2rem, 6vw, 5rem);
+  padding: clamp(0.75rem, 0.65vw, 2rem) 0rem;
+  text-decoration: none;
+  transition: all 800ms ease;
+  position: relative;
+  text-shadow: #000 12px 12px 15px;
+  font-family: 'Iowan';
+}
+
+.menu-item:hover::after {
+  content: '';
+  height: clamp(1rem, 4vw, 3rem);
+  width: clamp(1rem, 4vw, 3rem);
+  background-image: url('./pics/materium-logo.webp');
+  z-index: 3;
+  display: block;
+  bottom: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: bounce-in-out infinite 2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 20px #790cbd;
+}
+
+.orb,
+.orb2,
+.orb3,
+.orb4,
+.orb5 {
+  position: relative;
+  background: #3632cb;
+  border-radius: 50%;
+  z-index: 5;
+  opacity: .5;
+}
+.orb::before,
+.orb2::before,
+.orb3::before,
+.orb4::before,
+.orb5::before {
+  background: #fcfcfc;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  opacity: 1;
+  opacity: .5;
+}
+.orb::after,
+.orb2::after,
+.orb3::after,
+.orb4::after,
+.orb5::after {
+  background: #7a76ec;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: .5;
+}
+
+/* orb 1 */
+
+.orb {
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  left: 50%;
+  animation: purpleOrb1 6s infinite;
+}
+.orb::before {
+  width: 8px;
+  height: 8px;
+  left: 6px;
+  top: 6px;
+}
+.orb::after {
+  width: 15px;
+  height: 15px;
+  left: 3px;
+  top: 3px;
+}
+
+@keyframes purpleOrb1 {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+  10% {
+    left: 51%;
+  }
+  40% {
+    left: 49%;
+  }
+  90% {
+    bottom: 300px;
+    opacity: .0;
+  }
+  100% {
+    bottom: 310px;
+    opacity: 0;
+  }
+}
+
+/* orb2 */
+
+.orb2 {
+  width: 25px;
+  height: 25px;
+  bottom: 0px;
+  animation: purpleOrb2 10s infinite;
+}
+.orb2::before {
+  width: 12px;
+  height: 12px;
+  left: 6px;
+  top: 6px;
+}
+.orb2::after {
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 3px;
+}
+
+@keyframes purpleOrb2 {
+  0% {
+    bottom: 20vh;
+    opacity: 1;
+    left: 30%;
+  }
+  30% {
+    left: 40%;
+  }
+  80% {
+    bottom: 30vh;
+    opacity: 0;
+    left: 50%;
+
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* orb3 */
+
+.orb3 {
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  animation: purpleOrb3 15s infinite;
+}
+.orb3::before {
+  width: 8px;
+  height: 8px;
+  left: 6px;
+  top: 6px;
+}
+.orb3::after {
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  top: 2px;
+}
+
+@keyframes purpleOrb3 {
+  0% {
+    bottom: 20vh;
+    opacity: 1;
+    left: 70%;
+  }
+  30% {
+    left: 60%;
+  }
+  60% {
+    bottom: 40vh;
+    opacity: 0.3;
+    left: 65%;
+
+  }
+  100% {
+    bottom: 50vh;
+    left: 72%;
+    opacity: 0;
+  }
+}
+
+/* orb4 */
+
+.orb4 {
+  width: 20px;
+  height: 20px;
+  bottom: 0px;
+  animation: purpleOrb4 10s infinite;
+}
+.orb4::before {
+  width: 8px;
+  height: 8px;
+  left: 6px;
+  top: 6px;
+}
+.orb4::after {
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  top: 2px;
+}
+
+@keyframes purpleOrb4 {
+  0% {
+    bottom: 0vh;
+    opacity: 1;
+    left: 90%;
+  }
+  30% {
+    left: 60%;
+  }
+  60% {
+    bottom: 20vh;
+    opacity: 0.3;
+    left: 70%;
+
+  }
+  100% {
+    bottom: 25vh;
+    left: 68%;
+    opacity: 0;
+  }
+}
+
+/* orb5 */
+
+.orb5 {
+  width: 25px;
+  height: 25px;
+  bottom: 0px;
+  animation: purpleOrb5 6s infinite;
+}
+.orb5::before {
+  width: 12px;
+  height: 12px;
+  left: 6px;
+  top: 6px;
+}
+.orb5::after {
+  width: 22px;
+  height: 22px;
+  left: 2px;
+  top: 2px;
+}
+
+@keyframes purpleOrb5 {
+  0% {
+    bottom: 20vh;
+    opacity: 1;
+    left: 10%;
+  }
+  33% {
+    left: 5%;
+  }
+  66% {
+    opacity: 0.3;
+    left: 7%;
+
+  }
+  100% {
+    bottom: 50vh;
+    left: 7%;
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-in-out {
+  0% {
+    left: clamp(-3rem, -4vw, -6rem);
+  }
+  50% {
+    left: clamp(-4rem, -6vw, -8rem);  
+  }
+  100% {
+    left: clamp(-3rem, -4vw, -6rem);   
+  }
+}
+
+@keyframes bounce-in-out-top {
+  0% {
+    left: -15px;
+  }
+  50% {
+    left: -20px;
+  }
+  100% {
+    left: -15px;    
+  }
+}
+
+@keyframes bounce-in-out-small {
+  0% {
+    left: clamp(-1.5rem, -4vw, -6rem);
+  }
+  50% {
+    left: clamp(-2rem, -6vw, -8rem);  
+  }
+  100% {
+    left: clamp(-1.5rem, -4vw, -6rem);   
+  }
+}
+
+/*nav bar*/
+
+div{
+  box-sizing: border-box;
+}
+nav{
+  margin: 0;
+  padding: 0;
+  z-index: 4;
+  background: #111;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  color: #cde;
+}
+
+.nav-links {
+  display: flex;
+  justify-content:space-around;
+  width: 50%;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  color: #cde;
+  border-bottom:2px solid transparent;
+  transition:0.5s ease;
+  transform: translateX(0%);
+}
+.nav-links a:hover{
+  color:#f6df52;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #790cbd;
+
+}
+.nav-links > a:hover::after, 
+.dropdown > button:hover::after, 
+.dropdown > button:focus::after
+{
+  content: '';
+  height: .75rem;
+  width: .75rem;
+  background-image: url('./pics/materium-logo.webp');
+  z-index: 3;
+  display: block;
+  bottom: 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: bounce-in-out-top infinite 2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px #790cbd;
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background: #cde;
+  margin: 5px;
+  transition:all 0.5s ease;
+  z-index: 4;
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.toggle .line1{
+   transform: rotate(-45deg) translate(-5px,6px );
+}
+.toggle .line2{
+   opacity: 0;
+}
+.toggle .line3{
+   transform: rotate(45deg) translate(-5px,-6px );
+}
+
+/*dropdown content*/
+/* Dropdown Button */
+.dropdown {
+  position: relative;
+}
+
+.link {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1em;
+  color: #f6df52;
+  cursor: pointer;
+  text-shadow: 0 2px 8px #790cbd;
+
+}
+ive
+.dropdown .dropdown-menu {
+  position: absolute;
+  left: calc(-100% - .25rem);
+  top: calc(100% + .25rem);
+  background-color: #111;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 5px 15px 0 black;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10);
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  z-index: 5;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.dropdown.active > .link {
+  color: #f6df52;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 8px #790cbd;
+
+}
+
+.information-grid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: .25rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.dropdown button:hover{
+  color:#f6df52;
+  transition: all 400ms ease;
+  height:-8%;
+  text-shadow: 0 2px 8px #790cbd;
+  transform: scale(1.1);
+}
+
+.dropdown-links  a {
+  font-size: .85em;
+  padding:.1em;
+  padding-right: 1em;
+
+}
+
+.more-than-6 {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.dropdown-links a::before {
+  content: '-';
+  padding: 1em;
+}
+.dropdown-heading {
+  padding: 1em;
+  color: #f6df52;
+  text-shadow: 0 2px 8px #790cbd;
+}
+
+@media only screen and (max-width: 760px){
+  nav{
+    justify-content: space-between;
+    padding: 3vw 10vw;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0;
+    top:8vh;
+    min-height:92vh;
+    background: #333;
+    flex-direction: column;
+    align-items: center;   
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translateX(100%);
+    transition:All 0.5s ease-in;
+    display: none;
+  }
+  .nav-links a{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+  button.link {
+    background-color: #11111160;
+    border-radius: 15px;
+    height: 150px;
+    width: 250px;
+    border: 3px solid #111;
+    box-shadow: 0 4px 12px 0 black;
+  }
+  button.link:focus {
+    background-color: #ccddee30;
+  }
+  .nav-links > a:hover::after, 
+.dropdown > button:hover::after, 
+.dropdown > button:focus::after {
+  display: none;
+}
+ 
+}
+@media only screen and (max-width: 640px){
+  nav{
+    justify-content: space-between;
+    padding: 3vw 10vw;
+  }
+  .menu-item:hover::after {
+    animation: bounce-in-out-small infinite 2s;  }
+}
+.nav-active{
+  transform: translateX(0);
+  z-index: 5;
+  display: flex;
+}
+@media only screen and (max-width: 460px){
+  .nav-links{
+    width: 100%;
+    transition:All 0.5s ease;
+  }
+  .dropdown .dropdown-menu {
+    left: 0%;
+  }
+  .more-than-6 {
+    grid-template-columns: repeat(1, max-content);
+  }
+}
+.nav-active{
+  transform: translateX(0);
+}
+
+/* homepage bottom */
+.homeMirandusDescriptionContainer {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  background-color: #050505;
+  border-top: 6px solid #cde;
+  box-shadow: 0 0 24px 6px #7a76ec, inset 0 0 4px 2px #cde;
+  width: 99vw;
+  padding-bottom: 5%;
+
+}
+.homeHeader {
+  font-family: 'Iowan';
+  margin: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  color: #cde;
+  text-shadow: 0px 4px 4px #7a76ec;
+  text-transform: uppercase;
+}
+.homeinfocont {
+  display: flex;
+
+}
+.container {
+  width: 40%;
+  border: 4px solid #cde;
+  margin: 0% 5%;
+  box-shadow: 0 0 24px 6px #7a76ec, inset 0 0 4px 2px #cde;
+}
+.homeDescription {
+  color: #cde;
+  white-space: wrap;
+  display: flex;
+  text-align: center;
+  font-family: 'Iowan';
+  font-size: 1.2rem;
+  border: 4px solid #cde;
+  padding: 6% 4%;
+  position: relative;
+  margin: 3% 1%;
+  background-color: #111;
+  box-shadow: inset 0 0 44px 6px #000, inset 0 0 4px 2px #cde, 0 0 4px 2px #cde;
+}
+
+.homeDescription::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  content: '•';
+  border-right: 3px solid #cde;
+  border-bottom: 3px solid #cde;
+  color: #cde;
+  display: flex;
+  justify-content: center;
+}
+.homeDescription::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 25px;
+  width: 25px;
+  content: '•';
+  border-left: 3px solid #cde;
+  border-bottom: 3px solid #cde;
+  color: #cde;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*REACT*/
+  .r-displayedContainer {
+    margin: 2rem;
+    text-align: center;
+  }
+/*nav bar*/
+.nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.navTitle {
+  font-size: 2rem;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+  padding: .25rem;
+  align-items: center;
+}
+.nav li.active {
+  background-color: #555;
+}
+.nav li:hover {
+  background-color: #777;
+}
+.nav-links {
+  display: block;
+  text-decoration: none;
+  color: #cde;
+  transform: translateX(0%);
+}
+.nav-links:hover,
+.dropdown-link:hover {
+  color:#f6df52;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #790cbd;
+  line-height: 180%;
+  text-decoration: none;
+}
+.nav-links:hover::after, 
+.dropdown > button:hover::after, 
+.dropdown > button:focus::after
+{
+  content: '';
+  height: .85rem;
+  width: .85rem;
+  background-image: url('./pics/materium-logo.webp');
+  z-index: 3;
+  display: block;
+  bottom: 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: bounce-in-out-top infinite 2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px #790cbd;
+}
+
+
+.r-exemplarBackground {
+  background-image: url('../mirandushub/pics/human-exemplar-background.png');
+  background-position: 30% 40%;}
+.r-background {
+  background-color: #111;
+  background-image: linear-gradient(#3774b117 .1em, transparent .1em), linear-gradient(90deg, #3774b117 .1em, transparent .1em);
+  background-size: 3em 3em;
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  height: fit-content;
+  left: 0px;
+  position: absolute;
+  transition: opacity 800ms ease, 
+    background-size 800ms ease,
+    background-position 800ms ease;
+  width: 100vw;
+  z-index: -1;
+}
+.r-deedsBG {
+  background-image: url('../components/NFTpics/landDeeds/deedsBG.jpg');
+  background-position: 0% 70%;
+}
+
+.bubbleDisplayerOn,
+.bubbleDisplayerOff,
+.bubbleDisplayer {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vw;
+  cursor: pointer;
+  color:#f6df52;
+  text-shadow: #790cbd 0px 2px 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+  background: black;
+  border: 6px solid #f6df52;
+  box-shadow: 0 0 8px 8px #790cbd, inset  0px 0px 8px 2px #f6df52;
+  ;
+  animation: mtrm ease infinite 5s;
+  z-index: 11;
+}
+.bubbleDisplayerOn {
+  animation: slide-up 2s, hover ease 4s infinite, mtrm ease infinite 3s;
+  bottom: 27vh;
+}
+.bubbleDisplayerOff {
+  animation: slide-down 1s, hover ease 4s infinite, mtrm ease infinite 3s;
+  bottom: 3vh;
+}
+
+
+@keyframes slide-up {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30%;
+  }
+  100% {
+    bottom: 27%;
+  }
+}
+@keyframes slide-down {
+  0% {
+    bottom: 27%;
+  }
+  50% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 3%;
+  }
+}
+@keyframes hover {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes hover-background {
+  0% {
+    transform: translateY(2%);
+  }
+  50% {
+    transform: translateY(12%);
+  }
+  100% {
+    transform: translateY(2%);
+  }
+}
+
+.r-bubbleCont {
+  position: fixed;
+  display: flex;
+  overflow: auto;
+  scroll-behavior: auto;
+  flex-wrap: nowrap;
+  bottom: 0vh;
+  width: 110%;
+  left: 100vw;
+  justify-content: space-evenly;
+  background-color: #111;
+  border: 8px solid #1c2026;
+  border-radius: 5px;
+  padding-left: 25%;
+  padding-right: 25%;
+  box-shadow: 5px -4px 25px black;
+  padding-top: 1%;
+}
+.r-bubbleCont::-webkit-scrollbar {
+  display: none;
+}
+
+.r-scrollBtnL,
+.r-scrollBtnR,
+.r-scrollBtnTR,
+.r-scrollBtnTL {
+  background-color: #1c2026;
+  background-image: url('../mirandushub/pics/arrow.png');
+  width: 50px;
+  height: 7rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  z-index: 10;
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+  border-radius: 15%;
+  padding: 25px;
+  box-shadow: inset 5px -4px 25px black, 0 0 14px black;
+
+}
+.r-scrollBtnR {
+  right:8px;
+
+}
+.r-scrollBtnL {
+  animation: slide-in-btn 1s ease;
+  transform: rotate(180deg);
+  left:8px;
+}
+.r-scrollBtnTL,
+.r-scrollBtnTR {
+  height: 260px;
+  top: 30px;
+  padding: 1rem;
+}
+.r-scrollBtnTR {
+  right: 2.5rem;
+}
+.r-scrollBtnTL {
+  left: 1.5rem;
+  transform: rotate(180deg);
+
+}
+.r-scrollBtnL:active,
+.r-scrollBtnR:active,
+.r-scrollBtnTL:active,
+.r-scrollBtnTR:active {
+  background-color: #333;
+  box-shadow: inset 5px -4px 15px black, 0 0 7px black;
+}
+.r-scrollBtnR:active,
+.r-scrollBtnTR:active {
+  transform: scale(.95);
+}
+.r-scrollBtnL:active,
+.r-scrollBtnTL:active {
+  transform: scale(.95) rotate(180deg);
+}
+
+
+.r-bubbleCont.active {
+  animation: slide-in 1s;
+  left: 0px;
+}
+.r-bubbleCont.notActive {
+  animation: slide-out 1s;
+  left: 100vw
+
+}
+.r-bubblesCont::-webkit-scrollbar {
+  display: none;
+}
+.r-topNavBubbles {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  animation: mtrm 4s infinite, hover 3s infinite;
+  position: relative;
+}
+.r-topNavBubbles:hover {
+  cursor: pointer;
+}
+
+
+.r-deedOuterCont {
+  height: fit-content;
+  width: 80vw;
+  border: 3px solid #cde;
+  margin: 2% 8%;
+  box-shadow: 0 0 24px 6px #7a76ec, inset 0 0 4px 2px #cde;
+
+
+}
+.r-deedInfoCont {
+  border: 3px solid #cde;
+  margin: .5%;
+  position: relative;
+  background: radial-gradient(#3630cd40, #000);
+  
+
+}
+.r-deedInfoCont::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  content: '•';
+  border-right: 3px solid #cde;
+  border-bottom: 3px solid #cde;
+  color: #cde;
+  display: flex;
+  justify-content: center;
+}
+.r-deedInfoCont::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 25px;
+  width: 25px;
+  content: '•';
+  border-left: 3px solid #cde;
+  border-bottom: 3px solid #cde;
+  color: #cde;
+  display: flex;
+  justify-content: center;
+}
+
+.r-namePlate {
+  position: absolute;
+  z-index: 10;
+  font-size: 1em;
+  bottom: 110%;
+  color: #f6df52;
+  width: max-content;
+  top: -35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+@keyframes slide-in-btn {
+  0% {
+    left: 100vw;
+  }
+  80% {
+    left: -3vw;
+  }
+  100% {
+    left: 8px;
+  }
+}
+@keyframes slide-in {
+  0% {
+    left: 100vw;
+  }
+  80% {
+    left: -3vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slide-out {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: -3vw;
+  }  
+  100% {
+    left: 100vw;
+
+  }
+}
+@keyframes top-drift-in {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  5% {
+    border-radius: 40% 100% 50% 50%;
+  }
+  90% {
+    border-radius: 100% 40% 50% 50%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+.r-bubbleBtn {
+  border-radius: 50%;
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+  margin: 3% 4% 1.5% 4%;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
+.r-bubbleBtn::before {
+  content: '';
+  position: absolute;
+  background:  linear-gradient(#f6df52, #cfb612, #685a03);
+  box-shadow: 0 0 8px 8px #790cbd;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50% 50%;
+  z-index: -1;
+  transform: scale(1.05);
+  cursor: pointer;
+  animation: top-drift-in ease-out 2s, mtrm ease infinite 5s, hover-background 3s infinite;
+  ;
+  
+
+}
+.r-bubbleBtn:hover::before {
+  transform: scale(1.05);
+}
+
+@keyframes mtrm {
+  from {
+    transform: rotate(0deg), scale(1.1);
+  }
+  to {
+    transform: rotate(360deg), scale(1.1);
+  }
+  0% {
+    border-radius: 50% 50% 50% 45%;
+  }
+  25% {
+    border-radius: 37% 50% 43% 50%;
+
+  }
+  50% {
+    border-radius: 37% 40% 50% 50%;
+
+  }
+  75% {
+    border-radius: 45% 50% 37% 50%;
+
+  }
+  100% {
+    border-radius: 50% 50% 50% 45%;
+
+  }
+}
+
+.r-bubbleBtn:hover {
+  opacity: 1;
+  transition: all 1s ease;
+  transform: scale(1.05);
+}
+
+.r-background section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.r-charName {
+  color: #f6df52;
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+  margin-left:30%;
+
+}
+.r-deedName {
+  color: #f6df52;
+  font-size: 3em;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 2%;
+
+
+}
+.r-deedName::before {
+  font-size: 1rem;
+  content: 'The';
+  position: absolute;
+  top: 17%;
+  transform: translatex(-40px);
+  color: #cde;
+}
+.r-deedNameBanner {
+  background-color: #000;
+  width: 80%;
+  border: 4px solid #cde;
+  height: fit-content;
+  padding: 40px 100px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.r-charImg {
+  height: fit-content;
+  width: 30%;
+  border-radius: 15px;
+  border: 4px solid #f6df52;
+  box-shadow: 0 6px 20px #790cbd;
+
+}
+
+
+.r-deedStats {
+  display: flex;
+  flex-wrap: wrap;
+  color: #cde;
+  justify-content: space-around;
+}
+
+.r-deedStats span {
+  display: block;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  color: #f1d832;
+  letter-spacing: 1px;
+
+}
+.r-deedStats > span {
+  display: block;
+  width: 100%;
+  margin: 2%;
+  font-size: 1.75rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f6df52;
+}
+.r-deedStats li > span {
+  display: flex;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-right: 2%;
+}
+.r-deedStats li > span::before {
+  content: '✦';
+  transform: translatex(-5px) scale(.7);
+}
+.r-deedStats > ul {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.r-deedStats  li {
+  margin: 2%;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.r-charInfoCont {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: space-around;
+  border: 4px solid #f6df52;
+  box-shadow: 0 6px 20px #790cbd;
+  background-color: #790cbd08;
+  border-radius: 50% / 10%;
+  padding: 2%;
+  align-items: center;
+}
+.r-deedInnerInfoCont {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: fit-content;
+  justify-content: space-around;
+  border: 4px solid #f6df52;
+  box-shadow: 0 6px 20px #790cbd;
+  background-color: #790cbd08;
+  border-radius: 50% / 10%;
+  padding: 2%;
+  align-items: center;
+}
+.r-charDescription {
+  color: whitesmoke;
+  font-size: 1.1em;
+  order: 3;
+  height: fit-content;
+  text-align: center;
+  line-height: 1.5em;
+  padding: 1em;
+  padding-bottom: 3em;
+  white-space: pre-wrap;
+  font-family: iowan;
+}
+.r-deedDescription {
+  color: whitesmoke;
+  font-size: 1.1em;
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+  white-space: pre-wrap;
+  font-family: iowan;
+}
+.r-abilName {
+  color: #f6df52;
+  font-size: 1.75em;
+  order: 4;
+  height: fit-content;
+  width: fit-content;
+
+
+}
+.r-abilName span,
+.r-abilDesc span {
+  color: whitesmoke;
+  font-size: .55em;
+  font-family: iowan;
+  display: block;
+  text-decoration: underline;
+  line-height: 175%;
+  width: 100%;
+  
+}
+
+.r-abilImg {
+  height: 8rem;
+  width: fit-content;
+  order: 5;
+  width: 10%;
+}
+.r-abilDesc {
+  color: #f6df52;
+  font-size: 1.75em;
+  order: 6;
+  width: 45%;
+}
+
+
+.r-raceSelectorTitle,
+.r-deedSelectorTitle {
+  font-family: iowan;
+  text-align: center;
+  padding: 3%;
+  margin: auto;
+  color: #f6df52;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  line-height: 1;
+  border: 6px solid #f6df5220;
+  width: fit-content;
+  background-color: #11111199;
+  box-shadow: inset 0 0 30px 10px black;
+}
+.r-raceSelectorTitle::before {
+  content: 'E';
+  font-size: 5rem;
+  float: left;
+}
+.r-raceSelectorTitle::after {
+  content: 'S';
+  font-size: 5rem;
+  float: right;
+}
+.r-deedSelectorTitle::before {
+  content: 'D';
+  font-size: 5rem;
+  float: left;
+}
+.r-deedSelectorTitle::after {
+  content: 'S';
+  font-size: 5rem;
+  float: right;
+}
+
+.r-raceSelector,
+.r-deedSelector {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: #111;
+  height: 20rem;
+  box-shadow: inset  3px 3px 15px 3px #000;
+  overflow: auto;
+  overflow-y: hidden;
+
+}
+.r-raceSelectorContainer,
+.r-deedSelectorContainer {
+  margin: auto;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  perspective: 1000px;
+
+
+}
+
+
+.r-race {
+  margin: auto;
+  font-size: 2rem;
+  color: #cde;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-shadow: black 0 12px 13px;
+  font-weight: 700;
+}
+
+
+.r-raceNames,
+.r-deedNames {
+  display: flex;
+  justify-content:center;
+  color: #f6df52;
+  text-shadow: 5px 5px 15px #410e58;
+  font-size: 2rem;
+  height: 150%;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+.r-raceNames::after,
+.r-deedNames::after {
+  position: absolute;
+  border: 4px solid black;
+  background-color: #1c2026;
+  content: '';
+  width: 165px;
+  height: 3rem;
+  z-index: -1;
+  border-radius: 15%;
+  transition: all 1s ease;
+  box-shadow: inset  3px 3px 15px 3px #000;
+
+}
+
+.r-Homestead:hover .r-deedNames::after {
+  border: 4px solid #119a00;
+}
+.r-Humans:hover .r-raceNames::after,
+.r-Outpost:hover .r-deedNames::after,
+.r-Hamlets:hover .r-deedNames::after {
+  border: 4px solid #1c5d84;
+}
+.r-Orcs:hover .r-raceNames::after,
+.r-Dwarves:hover .r-raceNames::after,
+.r-Villages:hover .r-deedNames::after {
+  border: 4px solid #410e58;
+}
+.r-Halflings:hover .r-raceNames::after,
+.r-Towns:hover .r-deedNames::after {
+  border: 4px solid #cde;
+}
+.r-Elves:hover .r-raceNames::after,
+.r-Citadels .r-deedNames::after {
+  border: 4px solid #000;
+}
+
+
+.r-Humans::after{
+  background-image: url('../components/NFTpics/humans/human-exemplar-figure.png'), 
+  linear-gradient(to top left, #1c5d84, #50a0d1, #bfeafc);
+}
+
+.r-Dwarves::after {
+  background-image: urL('../components/NFTpics/dwarves/dwarf-exemplar-figure.png'),
+  linear-gradient(to top left, #410e58, #a359c4, #ffe5ff )
+}
+
+.r-Orcs::after {
+  background-image: url('../components/NFTpics/orcs/orc-exemplar-figure.png'),
+  linear-gradient(to top left, #410e58, #a359c4, #ffe5ff )
+}
+
+.r-Halflings::after {
+  background-image: url('../components/NFTpics/halflings/halfling-exemplar-figure.png'),
+  linear-gradient(to top left, #cde, #c19829, #feecbd);
+}
+
+.r-Elves::after {
+  background-image: url('../components/NFTpics/elves/elf-exemplar-figure.png'),
+  linear-gradient(to top left, #000, #111, #474545);
+}
+
+
+.r-Homestead::after {
+  background-image: url('../components/NFTpics/landDeeds/homestead/homesteadNoBG.png'),
+  linear-gradient(to top left, #053000, #1c990c, #053000);
+}
+.r-Outpost::after {
+  background-image: url('../components/NFTpics/landDeeds/outpost/outpostNoBG.png'),
+  linear-gradient(to top left, #1c5d84, #50a0d1, #1c5d84);
+}
+.r-Hamlets::after {
+  background-image: url('../components/NFTpics/landDeeds/hamlet/farmingHamletNoBG.png'),
+  linear-gradient(to top left, #1c5d84, #50a0d1, #1c5d84);
+}
+.r-Villages::after {
+  background-image: url('../components/NFTpics/landDeeds/village/villageOfTheBaronNoBG.png'),
+  linear-gradient(to top left, #410e58, #a359c4, #410e58 )
+}
+.r-Towns::after {
+  background-image: url('../components/NFTpics/landDeeds/town/townOfThePrinceNoBG.png'),
+  linear-gradient(to top left, #cde, #c19829, #cde);
+}
+
+.r-Humans, .r-Dwarves, .r-Orcs, .r-Halflings, .r-Elves,
+.r-Homestead, .r-Outpost, .r-Hamlets, .r-Villages, .r-Towns {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border: 3px solid #111;
+  padding: 5rem;
+  border-radius: 10%;
+  margin: 1vh 2vw;
+  border: 4px solid #000;
+  width: 175px;
+  transition: transform ease .25s;
+  transform-style: preserve-3d;
+  height: 280px;
+  box-shadow: 0 0 14px 3px black;
+}
+
+/*.r-Humans:hover,
+.r-Dwarves:hover,
+.r-Orcs:hover,
+.r-Halflings:hover,
+.r-Elves:hover {
+  transform:scale(1.05)
+}*/
+
+.r-Humans:active,
+.r-Dwarves:active,
+.r-Orcs:active,
+.r-Halflings:active,
+.r-Elves:active {
+  border: 1px solid whitesmoke;
+}
+
+/*.r-Humans:hover .r-Humans,
+.r-raceSelector:hover .r-Dwarves,
+.r-raceSelector:hover .r-Orcs,
+.r-raceSelector:hover .r-Halflings,
+.r-raceSelector:hover .r-Elves {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}*/
+
+
+.r-Humans::before, .r-Dwarves::before, .r-Orcs::before, .r-Halflings::before, .r-Elves::before,
+.r-Homestead::before, .r-Outpost::before, .r-Hamlets::before, .r-Villages::before, .r-Towns::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10%;
+  animation: glowing 8s linear infinite;
+}
+
+.r-Homestead::before {
+  background: linear-gradient(45deg, #28ff0d, #17d200, #12a800, #12a800, #17d200, #28ff0d);
+  background-size: 400%;
+}
+.r-Humans::before,
+.r-Outpost::before,
+.r-Hamlets::before {
+  background: linear-gradient(45deg, #56a6d7, #4796c5, #2f75a0, #2f75a0, #4796c5, #56a6d7  );
+  background-size: 400%;
+}
+.r-Dwarves::before,
+.r-Orcs::before,
+.r-Villages::before {
+  background: linear-gradient(45deg, #ffcfff, #da89ff, #a75cc8, #a75cc8, #da89ff, #ffcfff   );
+  background-size: 400%;
+}
+.r-Halflings::before,
+.r-Towns::before {
+  background: linear-gradient(45deg, #fff0cb, #e8c059, #b38d23, #b38d23, #e8c059, #fff0cb );
+  background-size: 400%;
+}
+.r-Elves::before {
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+}
+
+
+.r-Humans:active, .r-Dwarves:active, .r-Orcs:active, .r-Halflings:active, .r-Elves:active,
+.r-Homestead:active, .r-Outpost:active, .r-Hamlets:active, .r-Villages:active, .r-Towns:active {
+  transform: scale(.93);
+  transition: .1s ease all;
+}
+
+.r-Humans:hover::before, .r-Dwarves:hover::before, .r-Orcs:hover::before, .r-Halflings:hover::before, .r-Elves:hover::before,
+.r-Homestead:hover::before, .r-Outpost:hover::before, .r-Hamlets:hover::before, .r-Villages:hover::before, .r-Towns:hover::before {
+  opacity: 1;
+}
+
+.r-Humans::after, .r-Dwarves::after, .r-Orcs::after, .r-Halflings::after, .r-Elves::after,
+.r-Homestead::after, .r-Outpost::after, .r-Hamlets::after, .r-Villages::after, .r-Towns::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 8%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset  3px 3px 15px 3px #000;
+}
+.r-Homestead::after, .r-Outpost::after, .r-Hamlets::after, .r-Villages::after, .r-Towns::after {
+  background-size: cover;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  100% { background-position: 400% 0; }
+}
+
+.down80 {
+  margin-top: 80px;
+}
+
+
+
+/*carousel*/
+
+.main-img {
+  object-fit: cover;
+}
+figure, .carousel-img {
+  background-color: black;
+  border-radius: 15px;
+  width: 1100px;
+  min-height: 700px;
+}
+.carousel-img {
+  height: 700px;
+  width: auto;
+}
+.carousel-img-background {
+  background-color: #000;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  border-radius: 15px;
+}
+figure > div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+.single-slider-content {
+  box-shadow: none;
+}
+.slider-single-content {
+  box-shadow: none;
+}
+.react-3d-carousel {
+  border: 8px solid #cde;
+  box-sizing: initial;
+  transform: scale(.7);
+  animation: hide 1.5s;
+  background: linear-gradient(#222 15%, #000 85%) #222;
+  box-shadow: inset 0 0 12px 4px #000;
+  margin-top: -8%;
+
+}
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  66% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+
